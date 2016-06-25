@@ -82,11 +82,18 @@
       console.log(self.template);
 
       self.submit = function() {
-        return $http.post('/forms')
-          .then(function(response) {
-            console.log("Submitted form");
-            console.log(response.status);
-          });
+
+        var data = { patientForm: self.template };
+
+        return $http({
+          url: '/forms',
+          method: 'POST',
+          data: angular.toJson(data)
+        }).then(function(response) {
+          console.log("Submitted form");
+          console.log(response.status);
+        });
+
       };
 
     }
