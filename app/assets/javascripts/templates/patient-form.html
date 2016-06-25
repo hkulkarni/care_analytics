@@ -1,0 +1,21 @@
+<form>
+    <div class="form-group">
+
+        <div ng-repeat="input in patientForm.template track by input.label">
+          <label>{{ input.label }}:</label>
+          <div ng-repeat="child in input.children">
+              <label>{{ child.label }}:</label>
+              <input ng-model="child.value" type="text" class="form-control">
+              <span> {{ child.value }}</span>
+          </div>
+        </div>
+
+    </div>
+
+</form>
+
+<signature-pad></signature-pad>
+
+<button type="button" class="btn btn-primary" ng-click="patientForm.submit()">
+    Submit
+</button>

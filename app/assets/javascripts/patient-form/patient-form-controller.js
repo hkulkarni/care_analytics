@@ -1,11 +1,11 @@
 (function() {
     'use strict';
     angular.module('careAnalytics')
-      .controller('FormController', FormController);
+      .controller('PatientFormController', PatientFormController);
 
-    FormController.$inject = ['$http'];
+    PatientFormController.$inject = ['$http'];
 
-    function FormController($http) {
+    function PatientFormController($http) {
       var self = this;
       self.template = [
         {
@@ -82,15 +82,13 @@
       console.log(self.template);
 
       self.submit = function() {
-        console.log("clicked submit");
         return $http.post('/forms')
           .then(function(response) {
-            console.log("Submitted");
+            console.log("Submitted form");
             console.log(response.status);
           });
       };
 
     }
-
 
 })();
