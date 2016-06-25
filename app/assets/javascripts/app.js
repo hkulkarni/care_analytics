@@ -1,4 +1,4 @@
 (function() {
     'use strict';
-    angular.module('careAnalytics', ['ui.bootstrap', 'ngRoute']);
+    angular.module('careAnalytics', ['ui.bootstrap', 'templates']);
 })();
