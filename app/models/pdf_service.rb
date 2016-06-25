@@ -1,20 +1,33 @@
 class PdfService
 
-    # def initialize(:form) 
-    #     self.form = form
-    # end
+    def initialize(html:)
+        self.html = html
+    end
 
-    # private 
+    def save_pdf
+        File.open(path, 'wb') do |file|
+          file << pdf
+        end
+    end
 
-    # attr_accessor :form
+    private
 
-    def download 
-      html = render_to_string(:action => :show, :layout => "layout.html.erb") 
-      pdf = WickedPdf.new.pdf_from_string(html) 
+    attr_accessor :html
 
-      send_data(pdf, 
-        :filename => "my_pdf_name.pdf", 
-        :disposition => 'attachment') 
+    def pdf 
+       WickedPdf.new.pdf_from_string(html) 
+    end
+
+    def directory
+       'pdfs'
+    end
+
+    def name
+        'my_pdf_name.pdf'
+    end
+
+    def path
+        Rails.root.join(directory, name)
     end
 
 end
