@@ -121,6 +121,14 @@
 
       // ----------------------- End Signature code ----------------------- //
 
+      self.submit = function() {
+        console.log("clicked submit");
+        return $http.post('/forms')
+          .then(function(response) {
+            console.log("Submitted");
+            console.log(response.status);
+          });
+      };
 
     }
 

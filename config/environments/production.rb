@@ -76,4 +76,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # I recommend using this line to show error
+config.action_mailer.raise_delivery_errors = true
+
+ActionMailer::Base.smtp_settings = {
+  :address        => 'smtp.gmail.com',
+  :domain         => 'mail.google.com',
+  :port           => 587,
+  :user_name      => 'foo@gmail.com',
+  :password       => '******',
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
+
 end
