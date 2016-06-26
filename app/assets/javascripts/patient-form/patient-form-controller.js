@@ -141,7 +141,7 @@
         },
         {
           label: "Marital Status",
-          type: "checkbox",
+          type: "radio",
           options: [
             "Single",
             "Married",
@@ -316,7 +316,7 @@
         },
         {
           label: "Are you taking any medication?",
-          type: "checkbox-with-input",
+          type: "radio-with-input",
           options: [
             "Yes",
             "No"
@@ -328,7 +328,7 @@
         },
         {
           label: "Are you allergic to any medication?",
-          type: "checkbox-with-input",
+          type: "radio-with-input",
           options: [
             "Yes",
             "No"
@@ -340,7 +340,7 @@
         },
         {
           label: "Do you have a history of a major illness?",
-          type: "checkbox-with-input",
+          type: "radio-with-input",
           options: [
             "Yes",
             "No"
@@ -352,7 +352,7 @@
         },
         {
           label: "Have you had any operations?",
-          type: "checkbox-with-input",
+          type: "radio-with-input",
           options: [
             "Yes",
             "No"
@@ -364,7 +364,7 @@
         },
         {
           label: "Have you ever been involved in a serious accident?",
-          type: "checkbox-with-input",
+          type: "radio-with-input",
           options: [
             "Yes",
             "No"
@@ -376,7 +376,7 @@
         },
         {
           label: "Have you ever smoked or chewed tobacco?",
-          type: "checkbox-with-input",
+          type: "radio-with-input",
           options: [
             "Yes",
             "No"
@@ -388,7 +388,7 @@
         },
         {
           label: "Have seen a physician in the last 12 months? Why?",
-          type: "checkbox-with-input",
+          type: "radio-with-input",
           options: [
             "Yes",
             "No"
@@ -400,7 +400,7 @@
         },
         {
           label: "Are you pregnant (female patients only)?",
-          type: "checkbox-with-input",
+          type: "radio-with-input",
           options: [
             "Yes",
             "No"
@@ -409,6 +409,147 @@
           value: "",
           details: "",
           showInputIfValueIs: "Yes"
+        },
+        {
+          label: "Check any of the medical conditions below that you have had or currently have.",
+          type: "checkbox",
+          options: [
+            {
+              label: "Abnormal bleeding/Hemophilia",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Anemia",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Arthritis",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Asthma or Hayfever",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Bone Disorders",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Congenital Heart Defect",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Diabetes",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Dizziness",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Epilepsy",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Gastrointestinal Disorders",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Heart Problems",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Heart Murmur",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Hepatitis/Liver problems",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Herpes",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "High Blood Pressure",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "HIV / Aids",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Kidney problems",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Nervous Disorders",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Pneumonia",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Prolonged Bleeding",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Radiation/Chemotherapy",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Rheumatic Fever",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Tuberculosis",
+              value: false,
+              type: "leaf"
+            },
+            {
+              label: "Tumor or Cancer",
+              value: false,
+              type: "leaf"
+            }
+          ],
+          code: "MEDICAL_HISTORY_11",
+          value: "",
+        },
+        {
+          label: "",
+          type: "row",
+          children: [
+            {
+              label: "Are there any medical conditions we have not discussed that you feel we should be aware of?",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "MEDICAL_HISTORY_12",
+          value: ""
         }
       ];
 
@@ -437,21 +578,25 @@
         return formObj.type === 'row';
       };
 
+      self.isRadio = function(formObj) {
+        return formObj.type === 'radio' || radioHasInputField(formObj);
+      };
+
       self.isCheckbox = function(formObj) {
-        return formObj.type === 'checkbox' || checkboxHasInputField(formObj);
+        return formObj.type === 'checkbox';
       };
 
-      self.showInputField = function(checkbox) {
-        if (checkbox.showInputIfValueIs === "All" && isChecked(checkbox)) { return true; }
-        return checkboxHasInputField(checkbox) && checkbox.value === checkbox.showInputIfValueIs;
+      self.showInputField = function(formObj) {
+        if (formObj.showInputIfValueIs === "All" && isChecked(formObj)) { return true; }
+        return radioHasInputField(formObj) && formObj.value === formObj.showInputIfValueIs;
       };
 
-      function checkboxHasInputField(checkbox) {
-        return checkbox.type === 'checkbox-with-input';
+      function radioHasInputField(radio) {
+        return radio.type === 'radio-with-input';
       }
 
-      function isChecked(checkbox) {
-        return checkbox.value !== "";
+      function isChecked(formObj) {
+        return formObj.value !== "";
       }
 
     }

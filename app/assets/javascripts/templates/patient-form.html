@@ -16,7 +16,7 @@
 
   <!-- checkbox markup -->
   <div class="btn-group"
-       ng-show="patientForm.isCheckbox(input)"
+       ng-show="patientForm.isRadio(input)"
        ng-repeat="option in input.options">
       <label class="btn btn-success" 
              ng-model="input.value"
@@ -32,7 +32,13 @@
            ng-model="input.details"
            type="text"
            class="form-control">
-  </div> 
+  </div>
+
+  <div class="btn-group"
+       ng-show="patientForm.isCheckbox(input)"
+       ng-repeat="option in input.options">
+      <label class="btn btn-primary" ng-model="option.value" uib-btn-checkbox>{{ option.label }}</label>
+  </div>
 </form>
 
 <signature-pad></signature-pad>
