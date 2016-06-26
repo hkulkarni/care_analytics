@@ -205,6 +205,114 @@
           ],
           code: "SPOUSE_INFO_EMPLOYMENT",
           value: ""
+        },
+        {
+          label: "Emergency Contact Information",
+          type: "row",
+          children: [
+            {
+              label: "Name of nearest relative not living with you",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "EMERGENCY_CONTACT_1",
+          value: ""
+        },
+        {
+          label: "",
+          type: "row",
+          children: [
+            {
+              label: "Relationship with patient",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "EMERGENCY_CONTACT_2",
+          value: ""
+        },
+        {
+          label: "Address",
+          type: "row",
+          children: [
+            {
+              label: "Street",
+              value: "",
+              type: "leaf"
+            },
+            {
+              label: "City",
+              value: "",
+              type: "leaf"
+            },
+            {
+              label: "Zip",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "EMERGENCY_CONTACT_3",
+          value: ""
+        },
+        {
+          label: "",
+          type: "row",
+          children: [
+            {
+              label: "Home Phone",
+              value: "",
+              type: "leaf"
+            },
+            {
+              label: "Work Phone",
+              value: "",
+              type: "leaf"
+            },
+            {
+              label: "Cell Phone",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "EMERGENCY_CONTACT_4",
+          value: ""
+        },
+        {
+          label: "Medical History",
+          type: "row",
+          children: [
+            {
+              label: "Physician",
+              value: "",
+              type: "leaf"
+            },
+            {
+              label: "Date of last visit",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "MEDICAL_HISTORY_1",
+          value: ""
+        },
+        {
+          label: "",
+          type: "row",
+          children: [
+            {
+              label: "Address",
+              value: "",
+              type: "leaf"
+            },
+            {
+              label: "Phone",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "MEDICAL_HISTORY_2",
+          value: ""
         }
       ];
 
