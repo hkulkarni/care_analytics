@@ -1,8 +1,14 @@
 <form class="form-inline" ng-repeat="input in patientForm.template track by input.code">
   <h4>{{ patientForm.label(input) }}</h4>
-  <div class="form-group" style="padding-bottom: 10px; padding-top: 10px;" ng-repeat="child in input.children">
+
+  <!-- row markup -->
+  <div class="form-group" style="padding-bottom: 10px; padding-top: 10px;" ng-show="patientForm.isRow(input)" ng-repeat="child in input.children">
       <label>{{ patientForm.label(child) }}</label>
       <input style="padding-right: 100px; margin-right: 15px;" ng-model="child.value" type="text" class="form-control">
+  </div>
+
+  <div class="btn-group" ng-show="patientForm.isCheckbox(input)" ng-repeat="option in input.options">
+      <label class="btn btn-success" ng-model="input.value" uib-btn-radio="option" uncheckable>{{ option }}</label>     
   </div>
 </form>
 

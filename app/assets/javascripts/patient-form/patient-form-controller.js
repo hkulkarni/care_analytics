@@ -10,7 +10,7 @@
       self.template = [
         {
           label: "Patient's Name",
-          type: "container",
+          type: "row",
           children: [
             {
               label: "Last",
@@ -33,7 +33,7 @@
         },
         {
           label: "Mailing Address",
-          type: "container",
+          type: "row",
           children: [
             {
               label: "Street",
@@ -56,7 +56,7 @@
         },
         {
           label: "",
-          type: "parent",
+          type: "row",
           children: [
             {
               label: "Home Phone",
@@ -79,7 +79,7 @@
         },
         {
           label: "",
-          type: "parent",
+          type: "row",
           children: [
             {
               label: "Nickname",
@@ -97,7 +97,7 @@
         },
         {
           label: "",
-          type: "parent",
+          type: "row",
           children: [
             {
               label: "Email Address",
@@ -110,7 +110,7 @@
         },
         {
           label: "",
-          type: "parent",
+          type: "row",
           children: [
             {
               label: "Employer",
@@ -128,7 +128,7 @@
         },
         {
           label: "",
-          type: "parent",
+          type: "row",
           children: [
             {
               label: "Whom may we thank for referring you to our office?",
@@ -137,6 +137,73 @@
             }
           ],
           code: "REFERRAL",
+          value: ""
+        },
+        {
+          label: "Marital Status",
+          type: "checkbox",
+          options: [
+            "Single",
+            "Married",
+            "Widowed",
+            "Separated",
+            "Divorced"
+          ],
+          code: "MARITAL_STATUS",
+          value: ""
+        },
+        {
+          label: "Spouse Information (if applicable)",
+          type: "row",
+          children: [
+            {
+              label: "Spouse's Name",
+              value: "",
+              type: "leaf"
+            },
+            {
+              label: "Relationship to patient",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "SPOUSE_INFO_GENERAL",
+          value: ""
+        },
+        {
+          label: "",
+          type: "row",
+          children: [
+            {
+              label: "Birthdate",
+              value: "",
+              type: "leaf"
+            },
+            {
+              label: "Work Phone",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "SPOUSE_INFO_CONTACT",
+          value: ""
+        },
+        {
+          label: "",
+          type: "row",
+          children: [
+            {
+              label: "Employer",
+              value: "",
+              type: "leaf"
+            },
+            {
+              label: "Occupation",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "SPOUSE_INFO_EMPLOYMENT",
           value: ""
         }
       ];
@@ -160,6 +227,14 @@
       self.label = function(child) {
         if(!child.label) { return ''; }
         return child.label + ':';
+      };
+
+      self.isRow = function(formObj) {
+        return formObj.type === 'row';
+      };
+
+      self.isCheckbox = function(formObj) {
+        return formObj.type === 'checkbox';
       };
 
     }
