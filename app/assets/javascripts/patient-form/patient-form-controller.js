@@ -313,6 +313,102 @@
           ],
           code: "MEDICAL_HISTORY_2",
           value: ""
+        },
+        {
+          label: "Are you taking any medication?",
+          type: "checkbox-with-input",
+          options: [
+            "Yes",
+            "No"
+          ],
+          code: "MEDICAL_HISTORY_3",
+          value: "",
+          details: "",
+          showInputIfValueIs: "Yes"
+        },
+        {
+          label: "Are you allergic to any medication?",
+          type: "checkbox-with-input",
+          options: [
+            "Yes",
+            "No"
+          ],
+          code: "MEDICAL_HISTORY_4",
+          value: "",
+          details: "",
+          showInputIfValueIs: "Yes"
+        },
+        {
+          label: "Do you have a history of a major illness?",
+          type: "checkbox-with-input",
+          options: [
+            "Yes",
+            "No"
+          ],
+          code: "MEDICAL_HISTORY_5",
+          value: "",
+          details: "",
+          showInputIfValueIs: "Yes"
+        },
+        {
+          label: "Have you had any operations?",
+          type: "checkbox-with-input",
+          options: [
+            "Yes",
+            "No"
+          ],
+          code: "MEDICAL_HISTORY_6",
+          value: "",
+          details: "",
+          showInputIfValueIs: "Yes"
+        },
+        {
+          label: "Have you ever been involved in a serious accident?",
+          type: "checkbox-with-input",
+          options: [
+            "Yes",
+            "No"
+          ],
+          code: "MEDICAL_HISTORY_7",
+          value: "",
+          details: "",
+          showInputIfValueIs: "Yes"
+        },
+        {
+          label: "Have you ever smoked or chewed tobacco?",
+          type: "checkbox-with-input",
+          options: [
+            "Yes",
+            "No"
+          ],
+          code: "MEDICAL_HISTORY_8",
+          value: "",
+          details: "",
+          showInputIfValueIs: "Yes"
+        },
+        {
+          label: "Have seen a physician in the last 12 months? Why?",
+          type: "checkbox-with-input",
+          options: [
+            "Yes",
+            "No"
+          ],
+          code: "MEDICAL_HISTORY_9",
+          value: "",
+          details: "",
+          showInputIfValueIs: "Yes"
+        },
+        {
+          label: "Are you pregnant (female patients only)?",
+          type: "checkbox-with-input",
+          options: [
+            "Yes",
+            "No"
+          ],
+          code: "MEDICAL_HISTORY_10",
+          value: "",
+          details: "",
+          showInputIfValueIs: "Yes"
         }
       ];
 
@@ -342,8 +438,21 @@
       };
 
       self.isCheckbox = function(formObj) {
-        return formObj.type === 'checkbox';
+        return formObj.type === 'checkbox' || checkboxHasInputField(formObj);
       };
+
+      self.showInputField = function(checkbox) {
+        if (checkbox.showInputIfValueIs === "All" && isChecked(checkbox)) { return true; }
+        return checkboxHasInputField(checkbox) && checkbox.value === checkbox.showInputIfValueIs;
+      };
+
+      function checkboxHasInputField(checkbox) {
+        return checkbox.type === 'checkbox-with-input';
+      }
+
+      function isChecked(checkbox) {
+        return checkbox.value !== "";
+      }
 
     }
 

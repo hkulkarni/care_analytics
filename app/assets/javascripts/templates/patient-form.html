@@ -1,19 +1,44 @@
-<form class="form-inline" ng-repeat="input in patientForm.template track by input.code">
+<form class="form-inline" 
+      ng-repeat="input in patientForm.template track by input.code">
   <h4>{{ patientForm.label(input) }}</h4>
 
   <!-- row markup -->
-  <div class="form-group" style="padding-bottom: 10px; padding-top: 10px;" ng-show="patientForm.isRow(input)" ng-repeat="child in input.children">
+  <div class="form-group"
+       style="padding-bottom: 10px; padding-top: 10px;"
+       ng-show="patientForm.isRow(input)"
+       ng-repeat="child in input.children">
       <label>{{ patientForm.label(child) }}</label>
-      <input style="padding-right: 100px; margin-right: 15px;" ng-model="child.value" type="text" class="form-control">
+      <input style="padding-right: 100px; margin-right: 15px;"
+             ng-model="child.value"
+             type="text"
+             class="form-control">
   </div>
 
-  <div class="btn-group" ng-show="patientForm.isCheckbox(input)" ng-repeat="option in input.options">
-      <label class="btn btn-success" ng-model="input.value" uib-btn-radio="option" uncheckable>{{ option }}</label>     
+  <!-- checkbox markup -->
+  <div class="btn-group"
+       ng-show="patientForm.isCheckbox(input)"
+       ng-repeat="option in input.options">
+      <label class="btn btn-success" 
+             ng-model="input.value"
+             uib-btn-radio="option"
+             uncheckable>
+             {{ option }}
+      </label>    
   </div>
+  
+  <!-- checkbox details markup -->
+  <div ng-show="patientForm.showInputField(input)">
+    <input style="padding-right: 100px; margin-right: 15px;" 
+           ng-model="input.details"
+           type="text"
+           class="form-control">
+  </div> 
 </form>
 
 <signature-pad></signature-pad>
 
-<button type="button" class="btn btn-primary" ng-click="patientForm.submit()">
+<button type="button"
+        class="btn btn-primary"
+        ng-click="patientForm.submit()">
     Submit
 </button>
