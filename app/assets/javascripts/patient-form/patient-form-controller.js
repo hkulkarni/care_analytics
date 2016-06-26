@@ -74,7 +74,69 @@
               type: "leaf"
             }
           ],
-          code: "Phone",
+          code: "CONTACT",
+          value: ""
+        },
+        {
+          label: "",
+          type: "parent",
+          children: [
+            {
+              label: "Nickname",
+              value: "",
+              type: "leaf"
+            },
+            {
+              label: "Birthdate",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "PERSONAL",
+          value: ""
+        },
+        {
+          label: "",
+          type: "parent",
+          children: [
+            {
+              label: "Email Address",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "EMAIL_ADDRESS",
+          value: ""
+        },
+        {
+          label: "",
+          type: "parent",
+          children: [
+            {
+              label: "Employer",
+              value: "",
+              type: "leaf"
+            },
+            {
+              label: "Occupation",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "EMPLOYMENT",
+          value: ""
+        },
+        {
+          label: "",
+          type: "parent",
+          children: [
+            {
+              label: "Whom may we thank for referring you to our office?",
+              value: "",
+              type: "leaf"
+            }
+          ],
+          code: "REFERRAL",
           value: ""
         }
       ];
@@ -82,7 +144,6 @@
       console.log(self.template);
 
       self.submit = function() {
-
         var data = { patientForm: self.template };
 
         return $http({
@@ -94,6 +155,11 @@
           console.log(response.status);
         });
 
+      };
+
+      self.label = function(child) {
+        if(!child.label) { return ''; }
+        return child.label + ':';
       };
 
     }

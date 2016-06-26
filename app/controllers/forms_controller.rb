@@ -1,7 +1,6 @@
 class FormsController < ApplicationController
 
     def create
-        puts "current_user: " + current_user.inspect
         html = render_to_string(:action => :pdf, :layout => "pdf.html.erb") 
         PdfService.new(html: html).save_pdf
 

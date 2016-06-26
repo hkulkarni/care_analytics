@@ -1,16 +1,9 @@
-<form>
-    <div class="form-group">
-
-        <div ng-repeat="input in patientForm.template track by input.label">
-          <label>{{ input.label }}:</label>
-          <div ng-repeat="child in input.children">
-              <label>{{ child.label }}:</label>
-              <input ng-model="child.value" type="text" class="form-control">
-              <span> {{ child.value }}</span>
-          </div>
-        </div>
-
-    </div>
+<form class="form-inline" ng-repeat="input in patientForm.template track by input.code">
+  <h4>{{ patientForm.label(input) }}</h4>
+  <div class="form-group" style="padding-bottom: 10px; padding-top: 10px;" ng-repeat="child in input.children">
+      <label>{{ patientForm.label(child) }}</label>
+      <input style="padding-right: 100px; margin-right: 15px;" ng-model="child.value" type="text" class="form-control">
+  </div>
 </form>
 
 <signature-pad></signature-pad>
