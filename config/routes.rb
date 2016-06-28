@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
 
   post '/forms' => 'forms#create'
+  get '/form' => 'forms#template'
 end

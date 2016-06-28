@@ -12,7 +12,10 @@
         scope: true, 
         templateUrl: 'patient-form.html',
         controller: 'PatientFormController',
-        controllerAs: 'patientForm'
+        controllerAs: 'patientForm',
+        link: function(scope, element, attributes, controller) {
+          controller.initializeForms();
+        }
       };
     }
 
