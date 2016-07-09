@@ -10,7 +10,7 @@ class FormsController < ApplicationController
     end
 
     def template
-      file = File.read('app/assets/javascripts/data/patient-form-templates/deepak-adult.json')
+      file = File.read("app/assets/javascripts/data/patient-form-templates/#{template_name}.json")
       render :json => JSON.parse(file)
     end
 
@@ -18,6 +18,10 @@ class FormsController < ApplicationController
 
     def patient_form
         params['patientForm']
+    end
+
+    def template_name
+        current_user.name.downcase.gsub(' ', '_')
     end
 
 end

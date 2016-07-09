@@ -6,6 +6,5 @@ class HomeController < ApplicationController
   end
 
   def signup
-    puts "params: " + params.inspect
   end
 end
