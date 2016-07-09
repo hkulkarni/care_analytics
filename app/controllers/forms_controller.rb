@@ -1,20 +1,30 @@
 class FormsController < ApplicationController
 
     def create
-        html = render_to_string(:action => :pdf, :layout => "pdf.html.erb") 
-        PdfService.new(html: html).save_pdf
-
-        PatientInformationMailer.patient_checkin_email(current_user).deliver_now
-
+        create_pdf
+        send_email
         render status: 200, json: @controller.to_json
     end
 
     def template
-      file = File.read("app/assets/javascripts/data/patient-form-templates/#{template_name}.json")
-      render :json => JSON.parse(file)
+        file = File.read("app/assets/javascripts/data/patient-form-templates/#{template_name}.json")
+        render :json => JSON.parse(file)
     end
 
     private
+
+    def send_email
+        PatientInformationMailer.patient_checkin_email(current_user).deliver_now
+    end
+
+    def create_pdf
+        PdfService.new(html: pdf_html).save_pdf
+    end
+
+    def pdf_html
+        @patient_form = patient_form
+        render_to_string(:action => :pdf, :layout => "pdf.html.erb")
+    end
 
     def patient_form
         params['patientForm']
