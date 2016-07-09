@@ -8,6 +8,7 @@
     function PatientFormController($http) {
       var self = this;
       self.template;
+      self.invalid = false;
 
       self.initializeForms = function() {
         return $http({
@@ -21,6 +22,8 @@
       };
 
       self.submit = function() {
+        self.invalid = invalidForm();
+        if (self.invalid) { return ; }
         var data = { patientForm: self.template };
 
         return $http({
@@ -29,7 +32,6 @@
           data: angular.toJson(data)
         }).then(function(response) {
           console.log("Submitted form");
-          console.log(response.status);
         });
 
       };
@@ -62,6 +64,26 @@
 
       function isChecked(formObj) {
         return formObj.value !== "";
+      }
+
+      function invalidForm() {
+        var invalid = false;
+        for (var index = 0; index < self.template.length; index++) {
+          var section = self.template[index];
+
+          if (section.type === 'row' || section.type === 'checkbox') {
+            for (var childIndex = 0; childIndex < section.children.length; childIndex++) {
+              var child = section.children[childIndex];
+              if (child.value === '') { return true; }
+            }
+          }
+
+          if (section.type === 'radio-with-input') {
+              if (section.value === '') { return true; }            
+          }
+
+        }
+        return invalid;
       }
 
     }

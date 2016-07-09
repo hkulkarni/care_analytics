@@ -14,8 +14,8 @@
              class="form-control">
   </div>
 
-  <!-- checkbox markup -->
-  <div class="btn-group"
+  <!-- radio markup -->
+  <div class="radio-inline"
        ng-show="patientForm.isRadio(input)"
        ng-repeat="option in input.options">
       <label class="btn btn-success" 
@@ -26,25 +26,33 @@
       </label>    
   </div>
   
-  <!-- checkbox details markup -->
+  <!-- radio details markup -->
   <div ng-show="patientForm.showInputField(input)">
-    <input style="padding-right: 100px; margin-right: 15px;" 
+    <textarea style="padding-right: 100px; margin-right: 15px; margin-top: 5px;" 
            ng-model="input.details"
            type="text"
-           class="form-control">
+           class="form-control has-error"
+           rows="3"
+           placeholder="Comments">
+    </textarea>
   </div>
 
-  <div class="btn-group"
+  <!-- checkbox details markup -->
+  <div class="checkbox-inline"
        ng-show="patientForm.isCheckbox(input)"
-       ng-repeat="option in input.options">
-      <label class="btn btn-primary" ng-model="option.value" uib-btn-checkbox>{{ option.label }}</label>
+       ng-repeat="option in input.children">
+      <label class="btn btn-primary" 
+             ng-model="option.value"
+             uib-btn-checkbox>
+             {{ option.label }}
+      </label>
   </div>
 </form>
 
 <signature-pad></signature-pad>
-
 <button type="button"
         class="btn btn-primary"
         ng-click="patientForm.submit()">
     Submit
 </button>
+<label class="control-label text-danger" ng-show="patientForm.invalid">You have not filled out all the fields! All fields are required.</label>

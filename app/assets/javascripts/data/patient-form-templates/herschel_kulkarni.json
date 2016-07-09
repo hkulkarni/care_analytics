@@ -19,8 +19,7 @@
         "type": "leaf"
       }
     ],
-    "code": "PATIENT_NAME",
-    "value": ""
+    "code": "PATIENT_NAME"
   },
   {
     "label": "Mailing Address",
@@ -42,8 +41,7 @@
         "type": "leaf"
       }
     ],
-    "code": "MAILING_ADDRESS",
-    "value": ""
+    "code": "MAILING_ADDRESS"
   },
   {
     "label": "",
@@ -65,8 +63,7 @@
         "type": "leaf"
       }
     ],
-    "code": "CONTACT",
-    "value": ""
+    "code": "CONTACT"
   },
   {
     "label": "",
@@ -83,8 +80,7 @@
         "type": "leaf"
       }
     ],
-    "code": "PERSONAL",
-    "value": ""
+    "code": "PERSONAL"
   },
   {
     "label": "",
@@ -96,8 +92,7 @@
         "type": "leaf"
       }
     ],
-    "code": "EMAIL_ADDRESS",
-    "value": ""
+    "code": "EMAIL_ADDRESS"
   },
   {
     "label": "",
@@ -114,8 +109,7 @@
         "type": "leaf"
       }
     ],
-    "code": "EMPLOYMENT",
-    "value": ""
+    "code": "EMPLOYMENT"
   },
   {
     "label": "",
@@ -127,8 +121,7 @@
         "type": "leaf"
       }
     ],
-    "code": "REFERRAL",
-    "value": ""
+    "code": "REFERRAL"
   },
   {
     "label": "Marital Status",
@@ -158,8 +151,7 @@
         "type": "leaf"
       }
     ],
-    "code": "SPOUSE_INFO_GENERAL",
-    "value": ""
+    "code": "SPOUSE_INFO_GENERAL"
   },
   {
     "label": "",
@@ -176,8 +168,7 @@
         "type": "leaf"
       }
     ],
-    "code": "SPOUSE_INFO_CONTACT",
-    "value": ""
+    "code": "SPOUSE_INFO_CONTACT"
   },
   {
     "label": "",
@@ -194,8 +185,7 @@
         "type": "leaf"
       }
     ],
-    "code": "SPOUSE_INFO_EMPLOYMENT",
-    "value": ""
+    "code": "SPOUSE_INFO_EMPLOYMENT"
   },
   {
     "label": "Emergency Contact Information",
@@ -207,8 +197,7 @@
         "type": "leaf"
       }
     ],
-    "code": "EMERGENCY_CONTACT_1",
-    "value": ""
+    "code": "EMERGENCY_CONTACT_1"
   },
   {
     "label": "",
@@ -220,8 +209,7 @@
         "type": "leaf"
       }
     ],
-    "code": "EMERGENCY_CONTACT_2",
-    "value": ""
+    "code": "EMERGENCY_CONTACT_2"
   },
   {
     "label": "Address",
@@ -243,8 +231,7 @@
         "type": "leaf"
       }
     ],
-    "code": "EMERGENCY_CONTACT_3",
-    "value": ""
+    "code": "EMERGENCY_CONTACT_3"
   },
   {
     "label": "",
@@ -266,8 +253,7 @@
         "type": "leaf"
       }
     ],
-    "code": "EMERGENCY_CONTACT_4",
-    "value": ""
+    "code": "EMERGENCY_CONTACT_4"
   },
   {
     "label": "Medical History",
@@ -284,8 +270,7 @@
         "type": "leaf"
       }
     ],
-    "code": "MEDICAL_HISTORY_1",
-    "value": ""
+    "code": "MEDICAL_HISTORY_1"
   },
   {
     "label": "",
@@ -302,8 +287,7 @@
         "type": "leaf"
       }
     ],
-    "code": "MEDICAL_HISTORY_2",
-    "value": ""
+    "code": "MEDICAL_HISTORY_2"
   },
   {
     "label": "Are you taking any medication?",
@@ -404,130 +388,129 @@
   {
     "label": "Check any of the medical conditions below that you have had or currently have.",
     "type": "checkbox",
-    "options": [
+    "children": [
       {
         "label": "Abnormal bleeding/Hemophilia",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Anemia",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Arthritis",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Asthma or Hayfever",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Bone Disorders",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Congenital Heart Defect",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Diabetes",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Dizziness",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Epilepsy",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Gastrointestinal Disorders",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Heart Problems",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Heart Murmur",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Hepatitis/Liver problems",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Herpes",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "High Blood Pressure",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "HIV / Aids",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Kidney problems",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Nervous Disorders",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Pneumonia",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Prolonged Bleeding",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Radiation/Chemotherapy",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Rheumatic Fever",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Tuberculosis",
-        "value": false,
+        "value": "",
         "type": "leaf"
       },
       {
         "label": "Tumor or Cancer",
-        "value": false,
+        "value": "",
         "type": "leaf"
       }
     ],
-    "code": "MEDICAL_HISTORY_11",
-    "value": ""
+    "code": "MEDICAL_HISTORY_11"
   },
   {
     "label": "",
@@ -539,8 +522,7 @@
         "type": "leaf"
       }
     ],
-    "code": "MEDICAL_HISTORY_12",
-    "value": ""
+    "code": "MEDICAL_HISTORY_12"
   },
   {
     "label": "Dental History",
@@ -557,8 +539,7 @@
         "type": "leaf"
       }
     ],
-    "code": "DENTAL_HISTORY",
-    "value": ""
+    "code": "DENTAL_HISTORY"
   },
   {
     "label": "",
@@ -570,8 +551,7 @@
         "type": "leaf"
       }
     ],
-    "code": "DENTAL_HISTORY_1",
-    "value": ""
+    "code": "DENTAL_HISTORY_1"
   },
   {
     "label": "Are you presently in any dental pain?",
@@ -828,8 +808,7 @@
         "type": "leaf"
       }
     ],
-    "code": "INSURANCE",
-    "value": ""
+    "code": "INSURANCE"
   },
   {
     "label": "",
@@ -841,8 +820,7 @@
         "type": "leaf"
       }
     ],
-    "code": "INSURANCE_1",
-    "value": ""
+    "code": "INSURANCE_1"
   },
   {
     "label": "",
@@ -864,8 +842,7 @@
         "type": "leaf"
       }
     ],
-    "code": "INSURANCE_2",
-    "value": ""
+    "code": "INSURANCE_2"
   },
   {
     "label": "",
@@ -882,8 +859,7 @@
         "type": "leaf"
       }
     ],
-    "code": "INSURANCE_3",
-    "value": ""
+    "code": "INSURANCE_3"
   },
   {
     "label": "Do you have dual coverage?",
@@ -912,8 +888,7 @@
         "type": "leaf"
       }
     ],
-    "code": "INSURANCE_5",
-    "value": ""
+    "code": "INSURANCE_5"
   },
   {
     "label": "",
@@ -925,8 +900,7 @@
         "type": "leaf"
       }
     ],
-    "code": "INSURANCE_6",
-    "value": ""
+    "code": "INSURANCE_6"
   },
   {
     "label": "",
@@ -948,8 +922,7 @@
         "type": "leaf"
       }
     ],
-    "code": "INSURANCE_7",
-    "value": ""
+    "code": "INSURANCE_7"
   },
   {
     "label": "",
@@ -966,7 +939,6 @@
         "type": "leaf"
       }
     ],
-    "code": "INSURANCE_8",
-    "value": ""
+    "code": "INSURANCE_8"
   }
 ]
