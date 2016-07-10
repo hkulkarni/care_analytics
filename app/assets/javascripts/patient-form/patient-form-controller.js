@@ -71,7 +71,7 @@
         for (var index = 0; index < self.template.length; index++) {
           var section = self.template[index];
 
-          if (section.type === 'row' || section.type === 'checkbox') {
+          if (section.type === 'row') {
             for (var childIndex = 0; childIndex < section.children.length; childIndex++) {
               var child = section.children[childIndex];
               if (child.value === '') { return true; }

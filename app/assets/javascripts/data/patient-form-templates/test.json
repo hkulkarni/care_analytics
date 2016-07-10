@@ -1,0 +1,209 @@
+[
+  {
+    "label": "Patient's Name",
+    "type": "row",
+    "children": [
+      {
+        "label": "Last",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "First",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Middle",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "PATIENT_NAME"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Street",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "City",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Zip",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "MAILING_ADDRESS"
+  },
+  {
+    "label": "Are you taking any medication?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "MEDICAL_HISTORY_3",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Are you allergic to any medication?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "MEDICAL_HISTORY_4",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Check any of the medical conditions below that you have had or currently have.",
+    "type": "checkbox",
+    "children": [
+      {
+        "label": "Abnormal bleeding/Hemophilia",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Anemia",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Arthritis",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Asthma or Hayfever",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Bone Disorders",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Congenital Heart Defect",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Diabetes",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Dizziness",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Epilepsy",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Gastrointestinal Disorders",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Heart Problems",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Heart Murmur",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Hepatitis/Liver problems",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Herpes",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "High Blood Pressure",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "HIV / Aids",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Kidney problems",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Nervous Disorders",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Pneumonia",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Prolonged Bleeding",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Radiation/Chemotherapy",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Rheumatic Fever",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Tuberculosis",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Tumor or Cancer",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "MEDICAL_HISTORY_11"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Are there any medical conditions we have not discussed that you feel we should be aware of?",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "MEDICAL_HISTORY_12"
+  }
+]
