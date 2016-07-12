@@ -11,6 +11,13 @@ class FormsController < ApplicationController
         render :json => JSON.parse(file)
     end
 
+    def save_signature
+        File.open(Rails.root.join('signature-images', 'signature.png'), 'wb') do |f|
+            f.write(Base64.decode64(signature_image))
+        end
+        render status: 200, json: @controller.to_json
+    end
+
     private
 
     def send_email
@@ -24,6 +31,10 @@ class FormsController < ApplicationController
     def pdf_html
         @patient_form = patient_form
         render_to_string(:action => :pdf, :layout => "pdf.html.erb")
+    end
+
+    def signature_image
+        params['image']
     end
 
     def patient_form
