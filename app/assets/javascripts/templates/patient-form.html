@@ -47,6 +47,13 @@
              {{ option.label }}
       </label>
   </div>
+
+  <!-- text markup -->
+  <div ng-show="patientForm.isText(input)">
+      <label>
+        {{ input.value }}
+      </label>
+  </div>
 </form>
 
 <div id="signature-pad" class="m-signature-pad">

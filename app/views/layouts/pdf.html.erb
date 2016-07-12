@@ -27,7 +27,12 @@ span {
             <span> <b><%= child['label'] %>:</b> <%= child['value'] %> </span>
         <% end %>
     <% end %>
+
+    <% if section['type'] == 'text' %>
+        <span> <%= section['value'] %> </span>
+    <% end %>
 <% end %>
 
+<span> Patient Signature: </span>
 <br><%= image_tag(Rails.root.join('signature-images', 'signature.png'), height: '128', width: '256', :alt => "signature") %>
 </div>

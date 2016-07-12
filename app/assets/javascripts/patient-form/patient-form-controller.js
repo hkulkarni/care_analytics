@@ -65,6 +65,10 @@
         return formObj.type === 'checkbox';
       };
 
+      self.isText = function(formObj) {
+        return formObj.type === 'text';
+      };
+
       self.showInputField = function(formObj) {
         if (formObj.showInputIfValueIs === "All" && isChecked(formObj)) { return true; }
         return radioHasInputField(formObj) && formObj.value === formObj.showInputIfValueIs;
