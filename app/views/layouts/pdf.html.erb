@@ -3,6 +3,7 @@ span {
     display: block;
 }
 </style>
+<p class="date">Date: <%= Time.now.to_s("%B %d, %Y") %></p>
 
 <div style="display:inline;">
 <% @patient_form.each do |section| %>
@@ -35,4 +36,6 @@ span {
 
 <span> Patient Signature: </span>
 <br><%= image_tag(Rails.root.join('signature-images', 'signature.png'), height: '128', width: '256', :alt => "signature") %>
+
+<p class="date">Date: <%= Time.now.to_s("%B %d, %Y") %></p>
 </div>
