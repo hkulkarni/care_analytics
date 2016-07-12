@@ -45,7 +45,13 @@
           data: angular.toJson(data)
         }).then(function(response) {
           console.log("Submitted form");
+          clearForm();
         });
+      }
+
+      function clearForm() {
+        self.initializeForms();
+        self.signaturePad.clear();
       }
 
       self.label = function(child) {

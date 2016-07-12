@@ -22,28 +22,6 @@
     "code": "PATIENT_NAME"
   },
   {
-    "label": "",
-    "type": "row",
-    "children": [
-      {
-        "label": "Street",
-        "value": "",
-        "type": "leaf"
-      },
-      {
-        "label": "City",
-        "value": "",
-        "type": "leaf"
-      },
-      {
-        "label": "Zip",
-        "value": "",
-        "type": "leaf"
-      }
-    ],
-    "code": "MAILING_ADDRESS"
-  },
-  {
     "label": "Are you taking any medication?",
     "type": "radio-with-input",
     "options": [
@@ -51,18 +29,6 @@
       "No"
     ],
     "code": "MEDICAL_HISTORY_3",
-    "value": "",
-    "details": "",
-    "showInputIfValueIs": "Yes"
-  },
-  {
-    "label": "Are you allergic to any medication?",
-    "type": "radio-with-input",
-    "options": [
-      "Yes",
-      "No"
-    ],
-    "code": "MEDICAL_HISTORY_4",
     "value": "",
     "details": "",
     "showInputIfValueIs": "Yes"
