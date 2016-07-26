@@ -27,6 +27,7 @@ gem 'wkhtmltopdf-binary'
 
 gem 'angular-rails-templates'
 
+gem 'rails_12factor'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
