@@ -1,9 +1,15 @@
 class PatientInformationMailer < ApplicationMailer
-  default :from => 'herschel.kulkarni@gmail.com'
+  default :from => 'formudent.services@gmail.com'
 
   def patient_checkin_email(current_user)
-    attachments['my_patient_info.pdf'] = File.read('pdfs/my_pdf_name.pdf')
+    attachments[pdf_name(current_user)] = File.read("pdfs/#{pdf_name(current_user)}")
     mail( :to => current_user.email,
-    :subject => 'Thanks for signing up for our amazing app' )
+    :subject => "Patient information attached for: #{current_user.name}" )
+  end
+
+  private
+
+  def pdf_name(current_user)
+    "#{current_user.file_name}.pdf"
   end
 end

@@ -7,12 +7,12 @@ class FormsController < ApplicationController
     end
 
     def template
-        file = File.read("app/assets/javascripts/data/patient-form-templates/#{template_name}.json")
+        file = File.read("app/assets/javascripts/data/patient-form-templates/#{current_user.file_name}.json")
         render :json => JSON.parse(file)
     end
 
     def save_signature
-        File.open(Rails.root.join('signature-images', 'signature.png'), 'wb') do |f|
+        File.open(Rails.root.join('signature-images', "#{current_user.file_name}.png"), 'wb') do |f|
             f.write(Base64.decode64(signature_image))
         end
         render status: 200, json: @controller.to_json
@@ -25,7 +25,7 @@ class FormsController < ApplicationController
     end
 
     def create_pdf
-        PdfService.new(html: pdf_html).save_pdf
+        PdfService.new(html: pdf_html, current_user: current_user).save_pdf
     end
 
     def pdf_html

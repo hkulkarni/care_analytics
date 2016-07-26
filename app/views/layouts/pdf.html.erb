@@ -35,7 +35,7 @@ span {
 <% end %>
 
 <br><span> Patient Signature: </span>
-<br><%= image_tag(Rails.root.join('signature-images', 'signature.png'), height: '128', width: '256', :alt => "signature") %>
+<br><%= image_tag(Rails.root.join('signature-images', "#{current_user.file_name}.png"), height: '128', width: '256', :alt => "signature") %>
 
 <p class="date">Date: <%= Time.now.to_s("%B %d, %Y") %></p>
 </div>

@@ -1,7 +1,8 @@
 class PdfService
 
-    def initialize(html:)
+    def initialize(html:, current_user:)
         self.html = html
+        self.current_user = current_user
     end
 
     def save_pdf
@@ -12,22 +13,21 @@ class PdfService
 
     private
 
-    attr_accessor :html
+    attr_accessor :html, :current_user
 
     def pdf 
-       WickedPdf.new.pdf_from_string(html) 
+      WickedPdf.new.pdf_from_string(html) 
     end
 
     def directory
-       'pdfs'
-    end
-
-    def name
-        'my_pdf_name.pdf'
+      'pdfs'
     end
 
     def path
-        Rails.root.join(directory, name)
+      Rails.root.join(directory, name)
     end
 
+    def name
+      "#{current_user.file_name}.pdf"
+    end
 end
