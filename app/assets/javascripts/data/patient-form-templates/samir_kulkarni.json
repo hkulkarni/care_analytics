@@ -22,7 +22,7 @@
     "code": "PATIENT_NAME"
   },
   {
-    "label": "",
+    "label": "Mailing Address",
     "type": "row",
     "children": [
       {
@@ -44,6 +44,252 @@
     "code": "MAILING_ADDRESS"
   },
   {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Home Phone",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Work Phone",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Cell Phone",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "CONTACT"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Nickname",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Birthdate",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "PERSONAL"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Email Address",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "EMAIL_ADDRESS"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Employer",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Occupation",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "EMPLOYMENT"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Whom may we thank for referring you to our office?",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "REFERRAL"
+  },
+  {
+    "label": "Marital Status",
+    "type": "radio",
+    "options": [
+      "Single",
+      "Married",
+      "Widowed",
+      "Separated",
+      "Divorced"
+    ],
+    "code": "MARITAL_STATUS",
+    "value": ""
+  },
+  {
+    "label": "Spouse Information (if applicable)",
+    "type": "row",
+    "children": [
+      {
+        "label": "Spouse's Name",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Relationship to patient",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "SPOUSE_INFO_GENERAL"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Birthdate",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Work Phone",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "SPOUSE_INFO_CONTACT"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Employer",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Occupation",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "SPOUSE_INFO_EMPLOYMENT"
+  },
+  {
+    "label": "Emergency Contact Information",
+    "type": "row",
+    "children": [
+      {
+        "label": "Name of nearest relative not living with you",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "EMERGENCY_CONTACT_1"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Relationship with patient",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "EMERGENCY_CONTACT_2"
+  },
+  {
+    "label": "Address",
+    "type": "row",
+    "children": [
+      {
+        "label": "Street",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "City",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Zip",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "EMERGENCY_CONTACT_3"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Home Phone",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Work Phone",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Cell Phone",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "EMERGENCY_CONTACT_4"
+  },
+  {
+    "label": "Medical History",
+    "type": "row",
+    "children": [
+      {
+        "label": "Physician",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Date of last visit",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "MEDICAL_HISTORY_1"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Address",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Phone",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "MEDICAL_HISTORY_2"
+  },
+  {
     "label": "Are you taking any medication?",
     "type": "radio-with-input",
     "options": [
@@ -63,6 +309,78 @@
       "No"
     ],
     "code": "MEDICAL_HISTORY_4",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Do you have a history of a major illness?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "MEDICAL_HISTORY_5",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Have you had any operations?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "MEDICAL_HISTORY_6",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Have you ever been involved in a serious accident?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "MEDICAL_HISTORY_7",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Have you ever smoked or chewed tobacco?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "MEDICAL_HISTORY_8",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Have seen a physician in the last 12 months? Why?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "MEDICAL_HISTORY_9",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Are you pregnant (female patients only)?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "MEDICAL_HISTORY_10",
     "value": "",
     "details": "",
     "showInputIfValueIs": "Yes"
@@ -196,8 +514,431 @@
   },
   {
     "label": "",
-    "type": "text",
-    "value": "IF ORTHODONTIC INSURANCE covers a part of the fee, it may be paid directly to the practice or to the policy holder as arranged. If at any time, there is a change of employment, job status or insurance carrier, whatever part of the account balance not paid directly to the practice by an insurance company must be paid by the Financially Responsible Person. I hereby authorize release of any information relating to this claim and authorize payment of insurance benefits directly to Dr. Deepak K. Gupta.",
-    "code": "INFORMATION"
+    "type": "row",
+    "children": [
+      {
+        "label": "Are there any medical conditions we have not discussed that you feel we should be aware of?",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "MEDICAL_HISTORY_12"
+  },
+  {
+    "label": "Dental History",
+    "type": "row",
+    "children": [
+      {
+        "label": "General Dentist",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Date of last visit",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "DENTAL_HISTORY"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "What concerns you most about your teeth?",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "DENTAL_HISTORY_1"
+  },
+  {
+    "label": "Are you presently in any dental pain?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_2",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Have you ever experienced any unfavorable reaction to dentistry?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_3",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Have your wisdom teeth been removed?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_4",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Have you ever lost or chipped any teeth?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_5",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Have there been any injuries to face, mouth, or teeth?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_6",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Is any part of your mouth sensitive to temperature? Where?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_7",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Is any part of your mouth sensitive to pressure? Where?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_8",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Do your gums bleed when you brush?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_9",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Do you have any type of thumb or tongue habit?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_10",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Are you a mouth breather?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_11",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Have you ever seen an orthodontist? If yes, who and when?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_12",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "What is your attitude toward receiving orthodontic treatment?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_13",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Has anyone in your family received orthodontic treatment? How did they feel about the result?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_14",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Do your teeth or jaws ever feel uncomfortable when you awake in the morning?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_15",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Are you aware of your jaw clicking or popping?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_16",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Are you aware of clenching your teeth during the day?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_17",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Have you ever been told that you grind your teeth?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_18",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Do you have “tension” headaches?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_19",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Have you ever experienced chronic ringing in your ears?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_20",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Are you aware that some appointments will be during work hours?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "DENTAL_HISTORY_21",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "Orthodontic Insurance Information",
+    "type": "row",
+    "children": [
+      {
+        "label": "Insured's Name",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Social Security #",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "INSURANCE"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Employer Name",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "INSURANCE_1"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Insurance Company",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Group #",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "ID #",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "INSURANCE_2"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Insurance Co. Address",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Phone #",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "INSURANCE_3"
+  },
+  {
+    "label": "Do you have dual coverage?",
+    "type": "radio-with-input",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "code": "INSURANCE_4",
+    "value": "",
+    "details": "",
+    "showInputIfValueIs": "Yes"
+  },
+  {
+    "label": "If yes",
+    "type": "row",
+    "children": [
+      {
+        "label": "Insured's Name",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Social Security #",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "INSURANCE_5"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Employer Name",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "INSURANCE_6"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Insurance Company",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Group #",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "ID #",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "INSURANCE_7"
+  },
+  {
+    "label": "",
+    "type": "row",
+    "children": [
+      {
+        "label": "Insurance Co. Address",
+        "value": "",
+        "type": "leaf"
+      },
+      {
+        "label": "Phone #",
+        "value": "",
+        "type": "leaf"
+      }
+    ],
+    "code": "INSURANCE_8"
   }
 ]
