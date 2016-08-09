@@ -9,6 +9,7 @@
       var self = this;
       self.template;
       self.invalid = false;
+      self.showSubmitSuccessful = false;
 
       self.initializeForms = function() {
         return $http({
@@ -45,6 +46,7 @@
           data: angular.toJson(data)
         }).then(function(response) {
           console.log("Submitted form");
+          setSubmitSuccessful();
           clearForm();
         });
       }
@@ -79,6 +81,14 @@
         if (formObj.showInputIfValueIs === "All" && isChecked(formObj)) { return true; }
         return radioHasInputField(formObj) && formObj.value === formObj.showInputIfValueIs;
       };
+
+      function setSubmitSuccessful() {
+        self.showSubmitSuccessful = true;
+      }
+
+      self.unsetSubmitSuccessful = function() {
+        self.showSubmitSuccessful = false;
+      }
 
       function radioHasInputField(radio) {
         return radio.type === 'radio-with-input';

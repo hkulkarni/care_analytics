@@ -73,3 +73,22 @@
     Submit
 </button>
 <label class="control-label text-danger" ng-show="patientForm.invalid">You have not filled out all the fields! All fields are required.</label>
+
+<!-- Submit successful modal -->
+<div class="modal fade in" role="dialog" style="display: block;" ng-show="patientForm.showSubmitSuccessful">  
+    <div class="modal-dialog">    
+        <div class="modal-content">   
+            <div class="modal-header">
+              <h4 class="modal-title">Submission Successful!</h4>
+            </div>
+            <div class="modal-body">
+              <p>Please return the device to the front desk.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" ng-click="patientForm.unsetSubmitSuccessful()">OK</button>
+            </div>   
+        </div>  
+    </div>
+</div>
+  
+</div>
