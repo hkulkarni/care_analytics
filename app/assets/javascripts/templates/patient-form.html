@@ -70,7 +70,7 @@
         type="button"
         class="btn btn-primary"
         ng-click="patientForm.submit()">
-    Submit
+    {{ patientForm.buttonText() }}
 </button>
 <label class="control-label text-danger" ng-show="patientForm.invalid">You have not filled out all the fields! All fields are required.</label>
 

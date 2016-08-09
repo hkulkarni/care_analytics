@@ -10,6 +10,7 @@
       self.template;
       self.invalid = false;
       self.showSubmitSuccessful = false;
+      self.submitting = false;
 
       self.initializeForms = function() {
         return $http({
@@ -39,6 +40,7 @@
 
       function submitForm() {
         var data = { patientForm: self.template };
+        self.submitting = true;
 
         return $http({
           url: '/forms',
@@ -46,6 +48,7 @@
           data: angular.toJson(data)
         }).then(function(response) {
           console.log("Submitted form");
+          self.submitting = false;
           setSubmitSuccessful();
           clearForm();
         });
@@ -80,6 +83,11 @@
       self.showInputField = function(formObj) {
         if (formObj.showInputIfValueIs === "All" && isChecked(formObj)) { return true; }
         return radioHasInputField(formObj) && formObj.value === formObj.showInputIfValueIs;
+      };
+
+      self.buttonText = function() {
+        if (self.submitting === true) { return 'Submitting...'; }
+        return 'Submit';
       };
 
       function setSubmitSuccessful() {
