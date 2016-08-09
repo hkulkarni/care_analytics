@@ -75,7 +75,7 @@
         "type": "leaf"
       },
       {
-        "label": "Birthdate",
+        "label": "Birthdate (MM/DD/YYYY)",
         "value": "",
         "type": "leaf"
       }
