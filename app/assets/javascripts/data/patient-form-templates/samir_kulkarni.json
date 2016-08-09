@@ -16,7 +16,8 @@
       {
         "label": "Middle",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "PATIENT_NAME"
@@ -55,7 +56,8 @@
       {
         "label": "Work Phone",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Cell Phone",
@@ -940,5 +942,11 @@
       }
     ],
     "code": "INSURANCE_8"
+  },
+  {
+    "label": "",
+    "type": "text",
+    "value": "IF ORTHODONTIC INSURANCE covers a part of the fee, it may be paid directly to the practice or to the policy holder as arranged. If at any time, there is a change of employment, job status or insurance carrier, whatever part of the account balance not paid directly to the practice by an insurance company must be paid by the Financially Responsible Person. I hereby authorize release of any information relating to this claim and authorize payment of insurance benefits directly to Dr. Deepak K. Gupta.",
+    "code": "INFORMATION"
   }
 ]

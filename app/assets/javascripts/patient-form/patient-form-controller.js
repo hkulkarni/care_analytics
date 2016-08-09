@@ -61,7 +61,7 @@
 
       self.label = function(child) {
         if(!child.label) { return ''; }
-        return child.label + ':';
+        return child.label + self.optional(child) + ':';
       };
 
       self.isRow = function(formObj) {
@@ -79,6 +79,15 @@
       self.isText = function(formObj) {
         return formObj.type === 'text';
       };
+
+      self.optional = function(formObj) {
+        if (isOptional(formObj)) { return '*'; } 
+        return '';
+      };
+
+      function isOptional(formObj) {
+        return formObj.optional && formObj.optional === true;
+      }
 
       self.showInputField = function(formObj) {
         if (formObj.showInputIfValueIs === "All" && isChecked(formObj)) { return true; }
@@ -114,16 +123,20 @@
           if (section.type === 'row') {
             for (var childIndex = 0; childIndex < section.children.length; childIndex++) {
               var child = section.children[childIndex];
-              if (child.value === '') { return true; }
+              if (invalidFormItem(child)) { return true; }
             }
           }
 
           if (section.type === 'radio-with-input') {
-              if (section.value === '') { return true; }            
+              if (invalidFormItem(section)) { return true; }            
           }
 
         }
         return invalid;
+      }
+
+      function invalidFormItem(item) {
+        return item.value === '' && !isOptional(item);
       }
 
       // -------------------- signature pad code ---------------------------- //

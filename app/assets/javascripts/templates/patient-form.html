@@ -72,7 +72,7 @@
         ng-click="patientForm.submit()">
     {{ patientForm.buttonText() }}
 </button>
-<label class="control-label text-danger" ng-show="patientForm.invalid">You have not filled out all the fields! All fields are required.</label>
+<label class="control-label text-danger" ng-show="patientForm.invalid">You have not filled out all the required fields! All fields with '*' are required.</label>
 
 <!-- Submit successful modal -->
 <div class="modal fade in" role="dialog" style="display: block;" ng-show="patientForm.showSubmitSuccessful">  
