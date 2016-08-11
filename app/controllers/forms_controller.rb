@@ -9,6 +9,9 @@ class FormsController < ApplicationController
     def template
         file = File.read("app/assets/javascripts/data/patient-form-templates/#{current_user.file_name}.json")
         render :json => JSON.parse(file)
+    rescue
+        file = File.read("app/assets/javascripts/data/patient-form-templates/default.json")
+        render :json => JSON.parse(file)
     end
 
     def save_signature
