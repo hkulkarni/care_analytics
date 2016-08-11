@@ -81,7 +81,7 @@
       };
 
       self.optional = function(formObj) {
-        if (isOptional(formObj)) { return '*'; } 
+        if (!isOptional(formObj)) { return '*'; } 
         return '';
       };
 
