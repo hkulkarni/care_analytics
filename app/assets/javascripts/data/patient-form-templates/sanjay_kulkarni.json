@@ -16,7 +16,8 @@
       {
         "label": "Middle",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "PATIENT_NAME"
