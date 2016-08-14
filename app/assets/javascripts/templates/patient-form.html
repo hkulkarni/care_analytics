@@ -4,11 +4,11 @@
 
   <!-- row markup -->
   <div class="form-group"
-       style="padding-bottom: 10px; padding-top: 10px;"
+       style="padding-bottom: 10px; padding-top: 10px; margin-left: 20px"
        ng-show="patientForm.isRow(input)"
        ng-repeat="child in input.children">
-      <label>{{ patientForm.label(child) }}</label>
-      <input style="padding-right: 100px; margin-right: 15px;"
+      <label style="display: block;">{{ patientForm.label(child) }}</label>
+      <input style="width: 450px; margin-right: 15px;"
              ng-model="child.value"
              type="text"
              class="form-control">
@@ -18,7 +18,7 @@
   <div class="radio-inline"
        ng-show="patientForm.isRadio(input)"
        ng-repeat="option in input.options">
-      <label class="btn btn-success" 
+      <label class="btn btn-primary" 
              ng-model="input.value"
              uib-btn-radio="option"
              uncheckable>
@@ -28,7 +28,7 @@
   
   <!-- radio details markup -->
   <div ng-show="patientForm.showInputField(input)">
-    <textarea style="padding-right: 100px; margin-right: 15px; margin-top: 5px;" 
+    <textarea style="width: 936px; margin-left: 20px; margin-top: 12px;" 
            ng-model="input.details"
            type="text"
            class="form-control has-error"
@@ -40,23 +40,26 @@
   <!-- checkbox details markup -->
   <div class="checkbox-inline"
        ng-show="patientForm.isCheckbox(input)"
-       ng-repeat="option in input.children">
+       ng-repeat="option in input.children"
+       style="margin-left: 0px;">
       <label class="btn btn-primary" 
              ng-model="option.value"
+             style="width: 250px; margin-bottom: 5px;"
              uib-btn-checkbox>
              {{ option.label }}
       </label>
   </div>
 
   <!-- text markup -->
-  <div ng-show="patientForm.isText(input)">
+  <div ng-show="patientForm.isText(input)"
+       style="margin-bottom: 15px;">
       <label>
         {{ input.value }}
       </label>
   </div>
 </form>
 
-<div id="signature-pad" class="m-signature-pad">
+<div id="signature-pad" class="m-signature-pad" style="min-height: 500px;">
   <div class="m-signature-pad--body">
     <canvas></canvas>
   </div>
@@ -69,10 +72,15 @@
 <button id="submit-button"
         type="button"
         class="btn btn-primary"
+        style="margin-top: 30px;"
         ng-click="patientForm.submit()">
     {{ patientForm.buttonText() }}
 </button>
-<label class="control-label text-danger" ng-show="patientForm.invalid">You have not filled out all the required fields! All fields with '*' are required.</label>
+<label class="control-label text-danger"
+       ng-show="patientForm.invalid"
+       style="position:relative; top: 15px; mergin-left: 8px;">
+       You have not filled out all the required fields! All fields with '*' are required.
+</label>
 
 <!-- Submit successful modal -->
 <div class="modal fade in" role="dialog" style="display: block;" ng-show="patientForm.showSubmitSuccessful">  
