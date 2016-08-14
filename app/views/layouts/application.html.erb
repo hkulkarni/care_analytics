@@ -16,8 +16,6 @@
         <p class="navbar-text navbar-right" style="padding-right: 15px;">Signed in as <%= current_user.name%> | <%= link_to "Logout", '/logout' %></p>
       </div>
     </nav>
-<% else %>
-  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
 <% end %>
 
 <%= yield %>
