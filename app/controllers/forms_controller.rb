@@ -24,15 +24,15 @@ class FormsController < ApplicationController
     private
 
     def send_email
-        PatientInformationMailer.patient_checkin_email(current_user).deliver_now
+        PatientInformationMailer.patient_checkin_email(current_user, patient_form).deliver_now
     end
 
     def create_pdf
-        PdfService.new(html: pdf_html, current_user: current_user).save_pdf
+        PdfService.new(html: pdf_html, patient_form: patient_form).save_pdf
     end
 
     def pdf_html
-        @patient_form = patient_form
+        @patient_form = params['patientForm']
         render_to_string(:action => :pdf, :layout => "pdf.html.erb")
     end
 
@@ -41,7 +41,7 @@ class FormsController < ApplicationController
     end
 
     def patient_form
-        params['patientForm']
+        PatientForm.new(form: params['patientForm'])
     end
 
     def template_name

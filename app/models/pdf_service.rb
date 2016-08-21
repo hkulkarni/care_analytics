@@ -1,8 +1,8 @@
 class PdfService
 
-    def initialize(html:, current_user:)
+    def initialize(html:, patient_form:)
         self.html = html
-        self.current_user = current_user
+        self.patient_form = patient_form
     end
 
     def save_pdf
@@ -13,7 +13,7 @@ class PdfService
 
     private
 
-    attr_accessor :html, :current_user
+    attr_accessor :html, :patient_form
 
     def pdf 
       WickedPdf.new.pdf_from_string(html) 
@@ -28,6 +28,6 @@ class PdfService
     end
 
     def name
-      "#{current_user.file_name}.pdf"
+      "#{patient_form.file_name}.pdf"
     end
 end
