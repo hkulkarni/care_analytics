@@ -1,6 +1,6 @@
 class PatientForm
 
-    def initialize(form: form)
+    def initialize(form:)
         self.form = form
     end
 
