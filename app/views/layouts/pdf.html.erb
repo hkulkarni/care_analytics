@@ -12,6 +12,10 @@ span {
     <% else %>
         <br>
     <% end %>
+
+    <% if section['type'] == 'header' %>
+        <h2> <%= section['label'] %>: </h2>
+    <% end %>
     
     <% if section['type'] == 'row' %>
         <% section['children'].each do |child| %>

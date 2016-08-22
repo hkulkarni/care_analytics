@@ -1,6 +1,17 @@
 <form class="form-inline" 
       ng-repeat="input in patientForm.template track by input.code">
-  <h4>{{ patientForm.label(input) }}</h4>
+
+  <div class="page-header"
+       ng-show="patientForm.isHeader(input)">
+    <h3>{{ patientForm.header(input) }}
+      <span class="glyphicon glyphicon-chevron-down"
+            aria-hidden="true"
+            style="margin-left: 5px; top: 5px; color: #31b0d5; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+      </span>
+    </h3>
+  </div>
+
+  <h4 ng-show="!patientForm.isHeader(input)">{{ patientForm.label(input) }}</h4>
 
   <!-- row markup -->
   <div class="form-group"

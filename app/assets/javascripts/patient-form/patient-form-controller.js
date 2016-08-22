@@ -57,6 +57,7 @@
       function clearForm() {
         self.initializeForms();
         self.signaturePad.clear();
+        window.location('#');
       }
 
       self.label = function(child) {
@@ -78,6 +79,14 @@
 
       self.isText = function(formObj) {
         return formObj.type === 'text';
+      };
+
+      self.isHeader = function(formObj) {
+        return formObj.type === 'header';
+      };
+
+      self.header = function(formObj) {
+        return formObj.label;
       };
 
       self.optional = function(formObj) {
