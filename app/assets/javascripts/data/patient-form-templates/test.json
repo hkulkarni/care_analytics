@@ -1,4 +1,9 @@
-[
+[ 
+  {
+    "label": "Patient Info",
+    "type": "header",
+    "code": "PATIENT_INFO_HEADER"
+  },
   {
     "label": "Patient's Name",
     "type": "row",

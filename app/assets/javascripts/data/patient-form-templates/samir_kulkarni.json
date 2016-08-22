@@ -1,6 +1,11 @@
 [
   {
     "label": "Patient's Name",
+    "type": "header",
+    "code": "PATIENT_NAME_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
@@ -16,14 +21,18 @@
       {
         "label": "Middle",
         "value": "",
-        "type": "leaf",
-        "optional": true
+        "type": "leaf"
       }
     ],
     "code": "PATIENT_NAME"
   },
   {
     "label": "Mailing Address",
+    "type": "header",
+    "code": "MAILING_ADDRESS_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
@@ -37,12 +46,22 @@
         "type": "leaf"
       },
       {
+        "label": "State",
+        "value": "",
+        "type": "leaf"
+      },
+      {
         "label": "Zip",
         "value": "",
         "type": "leaf"
       }
     ],
     "code": "MAILING_ADDRESS"
+  },
+  {
+    "label": "Personal Information",
+    "type": "header",
+    "code": "PERSONAL_INFO_HEADER"
   },
   {
     "label": "",
@@ -56,8 +75,7 @@
       {
         "label": "Work Phone",
         "value": "",
-        "type": "leaf",
-        "optional": true
+        "type": "leaf"
       },
       {
         "label": "Cell Phone",
@@ -77,7 +95,7 @@
         "type": "leaf"
       },
       {
-        "label": "Birthdate",
+        "label": "Birthdate (MM/DD/YYYY)",
         "value": "",
         "type": "leaf"
       }
@@ -124,6 +142,11 @@
       }
     ],
     "code": "REFERRAL"
+  },
+  {
+    "label": "Spouse Information",
+    "type": "header",
+    "code": "SPOUSE_INFO_HEADER"
   },
   {
     "label": "Marital Status",
@@ -191,6 +214,11 @@
   },
   {
     "label": "Emergency Contact Information",
+    "type": "header",
+    "code": "EMERGENCY_CONTACT_INFO_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
@@ -228,6 +256,11 @@
         "type": "leaf"
       },
       {
+        "label": "State",
+        "value": "",
+        "type": "leaf"
+      },
+      {
         "label": "Zip",
         "value": "",
         "type": "leaf"
@@ -259,6 +292,11 @@
   },
   {
     "label": "Medical History",
+    "type": "header",
+    "code": "MEDICAL_HISTORY_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
@@ -528,6 +566,11 @@
   },
   {
     "label": "Dental History",
+    "type": "header",
+    "code": "DENTAL_HISTORY_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
@@ -797,6 +840,11 @@
   },
   {
     "label": "Orthodontic Insurance Information",
+    "type": "header",
+    "code": "INSURANCE_INFO_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
@@ -946,7 +994,7 @@
   {
     "label": "",
     "type": "text",
-    "value": "IF ORTHODONTIC INSURANCE covers a part of the fee, it may be paid directly to the practice or to the policy holder as arranged. If at any time, there is a change of employment, job status or insurance carrier, whatever part of the account balance not paid directly to the practice by an insurance company must be paid by the Financially Responsible Person. I hereby authorize release of any information relating to this claim and authorize payment of insurance benefits directly to Dr. Deepak K. Gupta.",
+    "value": "IF ORTHODONTIC INSURANCE covers a part of the fee, it may be paid directly to the practice or to the policy holder as arranged. If at any time, there is a change of employment, job status or insurance carrier, whatever part of the account balance not paid directly to the practice by an insurance company must be paid by the Financially Responsible Person. I hereby authorize release of any information relating to this claim and authorize payment of insurance benefits directly to the doctor.",
     "code": "INFORMATION"
   }
 ]
