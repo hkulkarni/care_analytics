@@ -11,11 +11,14 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Dr. <%= current_user.name %> check-in</a>
+            <a class="navbar-brand" href="#">Dr. <%= current_user.name %>'s check-in</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
+          <li><div class="navbar-brand navbar-powered-by" > powered by </div><img src="<%= asset_path( 'formudent.png' ) %>" class="navbar-image" href="www.formudent.com"/></li>
           <li><a href="/logout"> Logout </a></li>
+
         </ul>
+
       </div>
     </nav>
 <% end %>
