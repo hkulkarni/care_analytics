@@ -11,9 +11,15 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Dr. <%= current_user.name %> check-in </a>
+            <a class="navbar-brand" href="#">Dr. <%= current_user.name %> check-in</a>
         </div>
-        <p class="navbar-text navbar-right" style="padding-right: 15px;">Signed in as <%= current_user.name%> | <%= link_to "Logout", '/logout' %></p>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/logout"> 
+            <span class="navbar-right glyphicon glyphicon-align-justify"
+                  aria-hidden="true"
+                  style="margin-right: 5px; top: 3px; color: #31b0d5; padding-left: 5px;">
+            </span> Logout </a></li>
+        </ul>
       </div>
     </nav>
 <% end %>
