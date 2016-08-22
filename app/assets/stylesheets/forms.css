@@ -3,3 +3,33 @@
     background-color: #2e6da4;
     border-color: #269abc;
 }
+
+.form-label-sm {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+.form-header {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 28px;
+}
+
+.grey-label {
+    color: #595d64;
+}
+
+.light-blue-label {
+    color: #31b0d5;
+}
+
+.form-label-medium {
+    font-size: 16px;
+    padding-left: 20px;
+}

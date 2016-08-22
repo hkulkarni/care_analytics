@@ -1,6 +1,6 @@
 [
   {
-    "label": "Patient's Name",
+    "label": "PATIENT'S NAME",
     "type": "header",
     "code": "PATIENT_NAME_HEADER"
   },
@@ -27,7 +27,7 @@
     "code": "PATIENT_NAME"
   },
   {
-    "label": "Mailing Address",
+    "label": "MAILING ADDRESS",
     "type": "header",
     "code": "MAILING_ADDRESS_HEADER"
   },
@@ -59,7 +59,7 @@
     "code": "MAILING_ADDRESS"
   },
   {
-    "label": "Personal Information",
+    "label": "PERSONAL INFORMATION",
     "type": "header",
     "code": "PERSONAL_INFO_HEADER"
   },
@@ -144,7 +144,7 @@
     "code": "REFERRAL"
   },
   {
-    "label": "Spouse Information",
+    "label": "SPOUSE INFORMATION",
     "type": "header",
     "code": "SPOUSE_INFO_HEADER"
   },
@@ -213,7 +213,7 @@
     "code": "SPOUSE_INFO_EMPLOYMENT"
   },
   {
-    "label": "Emergency Contact Information",
+    "label": "EMERGENCY CONTACT INFORMATION",
     "type": "header",
     "code": "EMERGENCY_CONTACT_INFO_HEADER"
   },
@@ -291,7 +291,7 @@
     "code": "EMERGENCY_CONTACT_4"
   },
   {
-    "label": "Medical History",
+    "label": "MEDICAL HISTORY",
     "type": "header",
     "code": "MEDICAL_HISTORY_HEADER"
   },
@@ -565,7 +565,7 @@
     "code": "MEDICAL_HISTORY_12"
   },
   {
-    "label": "Dental History",
+    "label": "DENTAL HISTORY",
     "type": "header",
     "code": "DENTAL_HISTORY_HEADER"
   },
@@ -839,7 +839,7 @@
     "showInputIfValueIs": "Yes"
   },
   {
-    "label": "Orthodontic Insurance Information",
+    "label": "ORTHODONTIC INSURANCE INFORMATION",
     "type": "header",
     "code": "INSURANCE_INFO_HEADER"
   },

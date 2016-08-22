@@ -3,21 +3,24 @@
 
   <div class="page-header"
        ng-show="patientForm.isHeader(input)">
-    <h3>{{ patientForm.header(input) }}</h3>
+    <h3 class="form-header"><span class="light-blue-label"> | </span>{{ patientForm.header(input) }}</h3>
   </div>
 
-  <h4 ng-show="!patientForm.isHeader(input)">{{ patientForm.label(input) }}</h4>
+  <h4 ng-show="!patientForm.isHeader(input)"
+      class="grey-label form-label-medium">
+      {{ patientForm.label(input) }}
+  </h4>
 
   <!-- row markup -->
   <div class="form-group"
        style="padding-bottom: 10px; padding-top: 10px; margin-left: 20px"
        ng-show="patientForm.isRow(input)"
        ng-repeat="child in input.children">
-      <label style="display: block;">{{ patientForm.label(child) }}</label>
       <input style="width: 450px; margin-right: 15px;"
              ng-model="child.value"
              type="text"
              class="form-control">
+      <label class="grey-label form-label-sm">{{ patientForm.label(child) }}</label>
   </div>
 
   <!-- radio markup -->

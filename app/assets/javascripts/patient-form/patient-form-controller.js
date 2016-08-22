@@ -57,12 +57,11 @@
       function clearForm() {
         self.initializeForms();
         self.signaturePad.clear();
-        window.location('#');
       }
 
       self.label = function(child) {
         if(!child.label) { return ''; }
-        return child.label + self.optional(child) + ':';
+        return child.label + self.optional(child);
       };
 
       self.isRow = function(formObj) {
