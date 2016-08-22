@@ -18,7 +18,7 @@
   <div class="radio-inline"
        ng-show="patientForm.isRadio(input)"
        ng-repeat="option in input.options">
-      <label class="btn btn-primary" 
+      <label class="btn btn-info" 
              ng-model="input.value"
              uib-btn-radio="option"
              uncheckable>
@@ -42,7 +42,7 @@
        ng-show="patientForm.isCheckbox(input)"
        ng-repeat="option in input.children"
        style="margin-left: 0px;">
-      <label class="btn btn-primary" 
+      <label class="btn btn-info" 
              ng-model="option.value"
              style="width: 275px; margin-bottom: 5px; margin-right: 35px"
              uib-btn-checkbox>
@@ -71,7 +71,7 @@
 
 <button id="submit-button"
         type="button"
-        class="btn btn-primary"
+        class="btn btn-info"
         style="margin-top: 30px;"
         ng-click="patientForm.submit()">
     {{ patientForm.buttonText() }}
