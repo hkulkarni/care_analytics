@@ -41,4 +41,6 @@
 .navbar-powered-by {
     font-size: 12px;
     display: inline;
+    left: 32px;
+    position: relative;
 }
