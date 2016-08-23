@@ -17,11 +17,11 @@ class PatientForm
     attr_accessor :form
 
     def first_name
-        form[0]['children'][1]['value']
+        form[1]['children'][1]['value']
     end
 
     def last_name
-        form[0]['children'][0]['value']
+        form[1]['children'][0]['value']
     end
     
 end
