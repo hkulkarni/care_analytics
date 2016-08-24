@@ -1,6 +1,11 @@
 [
   {
-    "label": "Patient's Name",
+    "label": "PATIENT'S NAME",
+    "type": "header",
+    "code": "PATIENT_NAME_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
@@ -16,13 +21,19 @@
       {
         "label": "Middle",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "PATIENT_NAME"
   },
   {
-    "label": "Mailing Address",
+    "label": "MAILING ADDRESS",
+    "type": "header",
+    "code": "MAILING_ADDRESS_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
@@ -36,6 +47,11 @@
         "type": "leaf"
       },
       {
+        "label": "State",
+        "value": "",
+        "type": "leaf"
+      },
+      {
         "label": "Zip",
         "value": "",
         "type": "leaf"
@@ -44,21 +60,16 @@
     "code": "MAILING_ADDRESS"
   },
   {
+    "label": "PERSONAL INFORMATION",
+    "type": "header",
+    "code": "PERSONAL_INFO_HEADER"
+  },
+  {
     "label": "",
     "type": "row",
     "children": [
       {
-        "label": "Home Phone",
-        "value": "",
-        "type": "leaf"
-      },
-      {
-        "label": "Work Phone",
-        "value": "",
-        "type": "leaf"
-      },
-      {
-        "label": "Cell Phone",
+        "label": "Preferred Phone",
         "value": "",
         "type": "leaf"
       }
@@ -72,7 +83,8 @@
       {
         "label": "Nickname",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Birthdate (MM/DD/YYYY)",
@@ -101,27 +113,49 @@
       {
         "label": "Employer",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Occupation",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "EMPLOYMENT"
+  },
+  {
+    "label": "Who referred you to our office?",
+    "type": "radio",
+    "options": [
+      "Flyers",
+      "Facebook",
+      "Google Search",
+      "TV ad",
+      "Radio ad",
+      "Billboard"
+    ],
+    "code": "REFERRAL_OPTIONS",
+    "value": ""
   },
   {
     "label": "",
     "type": "row",
     "children": [
       {
-        "label": "Whom may we thank for referring you to our office?",
+        "label": "Other",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "REFERRAL"
+  },
+  {
+    "label": "SPOUSE INFORMATION",
+    "type": "header",
+    "code": "SPOUSE_INFO_HEADER"
   },
   {
     "label": "Marital Status",
@@ -134,7 +168,8 @@
       "Divorced"
     ],
     "code": "MARITAL_STATUS",
-    "value": ""
+    "value": "",
+    "optional": true
   },
   {
     "label": "Spouse Information (if applicable)",
@@ -143,12 +178,14 @@
       {
         "label": "Spouse's Name",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Relationship to patient",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "SPOUSE_INFO_GENERAL"
@@ -160,12 +197,14 @@
       {
         "label": "Birthdate",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Work Phone",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "SPOUSE_INFO_CONTACT"
@@ -177,22 +216,29 @@
       {
         "label": "Employer",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Occupation",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "SPOUSE_INFO_EMPLOYMENT"
   },
   {
-    "label": "Emergency Contact Information",
+    "label": "EMERGENCY CONTACT INFORMATION",
+    "type": "header",
+    "code": "EMERGENCY_CONTACT_INFO_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
-        "label": "Name of nearest relative not living with you",
+        "label": "Emergency contact's name",
         "value": "",
         "type": "leaf"
       }
@@ -218,17 +264,26 @@
       {
         "label": "Street",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "City",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
+      },
+      {
+        "label": "State",
+        "value": "",
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Zip",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "EMERGENCY_CONTACT_3"
@@ -238,17 +293,7 @@
     "type": "row",
     "children": [
       {
-        "label": "Home Phone",
-        "value": "",
-        "type": "leaf"
-      },
-      {
-        "label": "Work Phone",
-        "value": "",
-        "type": "leaf"
-      },
-      {
-        "label": "Cell Phone",
+        "label": "Preferred Phone",
         "value": "",
         "type": "leaf"
       }
@@ -256,18 +301,25 @@
     "code": "EMERGENCY_CONTACT_4"
   },
   {
-    "label": "Medical History",
+    "label": "MEDICAL HISTORY",
+    "type": "header",
+    "code": "MEDICAL_HISTORY_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
         "label": "Physician",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Date of last visit",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "MEDICAL_HISTORY_1"
@@ -279,12 +331,14 @@
       {
         "label": "Address",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Phone",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "MEDICAL_HISTORY_2"
@@ -519,24 +573,32 @@
       {
         "label": "Are there any medical conditions we have not discussed that you feel we should be aware of?",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "MEDICAL_HISTORY_12"
   },
   {
-    "label": "Dental History",
+    "label": "DENTAL HISTORY",
+    "type": "header",
+    "code": "DENTAL_HISTORY_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
         "label": "General Dentist",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Date of last visit",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "DENTAL_HISTORY"
@@ -548,7 +610,8 @@
       {
         "label": "What concerns you most about your teeth?",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "DENTAL_HISTORY_1"
@@ -686,30 +749,6 @@
     "showInputIfValueIs": "Yes"
   },
   {
-    "label": "What is your attitude toward receiving orthodontic treatment?",
-    "type": "radio-with-input",
-    "options": [
-      "Yes",
-      "No"
-    ],
-    "code": "DENTAL_HISTORY_13",
-    "value": "",
-    "details": "",
-    "showInputIfValueIs": "Yes"
-  },
-  {
-    "label": "Has anyone in your family received orthodontic treatment? How did they feel about the result?",
-    "type": "radio-with-input",
-    "options": [
-      "Yes",
-      "No"
-    ],
-    "code": "DENTAL_HISTORY_14",
-    "value": "",
-    "details": "",
-    "showInputIfValueIs": "Yes"
-  },
-  {
     "label": "Do your teeth or jaws ever feel uncomfortable when you awake in the morning?",
     "type": "radio-with-input",
     "options": [
@@ -794,18 +833,25 @@
     "showInputIfValueIs": "Yes"
   },
   {
-    "label": "Orthodontic Insurance Information",
+    "label": "INSURANCE INFORMATION",
+    "type": "header",
+    "code": "INSURANCE_INFO_HEADER"
+  },
+  {
+    "label": "",
     "type": "row",
     "children": [
       {
         "label": "Insured's Name",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Social Security #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE"
@@ -817,7 +863,8 @@
       {
         "label": "Employer Name",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_1"
@@ -829,17 +876,20 @@
       {
         "label": "Insurance Company",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Group #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "ID #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_2"
@@ -851,12 +901,14 @@
       {
         "label": "Insurance Co. Address",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Phone #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_3"
@@ -871,7 +923,8 @@
     "code": "INSURANCE_4",
     "value": "",
     "details": "",
-    "showInputIfValueIs": "Yes"
+    "showInputIfValueIs": "Yes",
+    "optional": true
   },
   {
     "label": "If yes",
@@ -880,12 +933,14 @@
       {
         "label": "Insured's Name",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Social Security #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_5"
@@ -897,7 +952,8 @@
       {
         "label": "Employer Name",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_6"
@@ -909,17 +965,20 @@
       {
         "label": "Insurance Company",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Group #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "ID #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_7"
@@ -931,12 +990,14 @@
       {
         "label": "Insurance Co. Address",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Phone #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_8"
@@ -944,7 +1005,7 @@
   {
     "label": "",
     "type": "text",
-    "value": "IF ORTHODONTIC INSURANCE covers a part of the fee, it may be paid directly to the practice or to the policy holder as arranged. If at any time, there is a change of employment, job status or insurance carrier, whatever part of the account balance not paid directly to the practice by an insurance company must be paid by the Financially Responsible Person. I hereby authorize release of any information relating to this claim and authorize payment of insurance benefits directly to Dr. Deepak K. Gupta.",
+    "value": "IF INSURANCE covers a part of the fee, it may be paid directly to the practice or to the policy holder as arranged. If at any time, there is a change of employment, job status or insurance carrier, whatever part of the account balance not paid directly to the practice by an insurance company must be paid by the Financially Responsible Person. I hereby authorize release of any information relating to this claim and authorize payment of insurance benefits directly to the doctor.",
     "code": "INFORMATION"
   }
 ]
