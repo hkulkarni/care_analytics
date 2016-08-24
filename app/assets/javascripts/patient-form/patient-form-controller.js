@@ -93,10 +93,6 @@
         return '';
       };
 
-      function isOptional(formObj) {
-        return formObj.optional && formObj.optional === true;
-      }
-
       self.showInputField = function(formObj) {
         if (formObj.showInputIfValueIs === "All" && isChecked(formObj)) { return true; }
         return radioHasInputField(formObj) && formObj.value === formObj.showInputIfValueIs;
@@ -139,12 +135,31 @@
               if (invalidFormItem(section)) { return true; }            
           }
 
+          if (section.type === 'radio') {
+              if (invalidFormItem(section)) { return true; }            
+          }
+
         }
         return invalid;
       }
 
       function invalidFormItem(item) {
         return item.value === '' && !isOptional(item);
+      }
+
+      function isOptional(formObj) {
+        var allChildrenOptional = true;
+        if (formObj.children) {
+          for (var index = 0; index < formObj.children.length; index++) {
+            if(!isOptional(formObj.children[index])) {
+              allChildrenOptional = false;
+            }
+          }
+        } else {
+          allChildrenOptional = false;
+        }
+
+        return (formObj.optional && formObj.optional === true) || allChildrenOptional;
       }
 
       // -------------------- signature pad code ---------------------------- //

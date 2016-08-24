@@ -21,7 +21,8 @@
       {
         "label": "Middle",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "PATIENT_NAME"
@@ -68,17 +69,7 @@
     "type": "row",
     "children": [
       {
-        "label": "Home Phone",
-        "value": "",
-        "type": "leaf"
-      },
-      {
-        "label": "Work Phone",
-        "value": "",
-        "type": "leaf"
-      },
-      {
-        "label": "Cell Phone",
+        "label": "Preferred Phone",
         "value": "",
         "type": "leaf"
       }
@@ -92,7 +83,8 @@
       {
         "label": "Nickname",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Birthdate (MM/DD/YYYY)",
@@ -121,24 +113,41 @@
       {
         "label": "Employer",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Occupation",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "EMPLOYMENT"
+  },
+  {
+    "label": "Who referred you to our office?",
+    "type": "radio",
+    "options": [
+      "Flyers",
+      "Facebook",
+      "Google Search",
+      "TV ad",
+      "Radio ad",
+      "Billboard"
+    ],
+    "code": "REFERRAL_OPTIONS",
+    "value": ""
   },
   {
     "label": "",
     "type": "row",
     "children": [
       {
-        "label": "Whom may we thank for referring you to our office?",
+        "label": "Other",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "REFERRAL"
@@ -159,7 +168,8 @@
       "Divorced"
     ],
     "code": "MARITAL_STATUS",
-    "value": ""
+    "value": "",
+    "optional": true
   },
   {
     "label": "Spouse Information (if applicable)",
@@ -168,12 +178,14 @@
       {
         "label": "Spouse's Name",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Relationship to patient",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "SPOUSE_INFO_GENERAL"
@@ -185,12 +197,14 @@
       {
         "label": "Birthdate",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Work Phone",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "SPOUSE_INFO_CONTACT"
@@ -202,12 +216,14 @@
       {
         "label": "Employer",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Occupation",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "SPOUSE_INFO_EMPLOYMENT"
@@ -222,7 +238,7 @@
     "type": "row",
     "children": [
       {
-        "label": "Name of nearest relative not living with you",
+        "label": "Emergency contact's name",
         "value": "",
         "type": "leaf"
       }
@@ -248,22 +264,26 @@
       {
         "label": "Street",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "City",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "State",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Zip",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "EMERGENCY_CONTACT_3"
@@ -273,17 +293,7 @@
     "type": "row",
     "children": [
       {
-        "label": "Home Phone",
-        "value": "",
-        "type": "leaf"
-      },
-      {
-        "label": "Work Phone",
-        "value": "",
-        "type": "leaf"
-      },
-      {
-        "label": "Cell Phone",
+        "label": "Preferred Phone",
         "value": "",
         "type": "leaf"
       }
@@ -302,12 +312,14 @@
       {
         "label": "Physician",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Date of last visit",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "MEDICAL_HISTORY_1"
@@ -319,12 +331,14 @@
       {
         "label": "Address",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Phone",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "MEDICAL_HISTORY_2"
@@ -559,7 +573,8 @@
       {
         "label": "Are there any medical conditions we have not discussed that you feel we should be aware of?",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "MEDICAL_HISTORY_12"
@@ -576,12 +591,14 @@
       {
         "label": "General Dentist",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Date of last visit",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "DENTAL_HISTORY"
@@ -593,7 +610,8 @@
       {
         "label": "What concerns you most about your teeth?",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "DENTAL_HISTORY_1"
@@ -850,12 +868,14 @@
       {
         "label": "Insured's Name",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Social Security #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE"
@@ -867,7 +887,8 @@
       {
         "label": "Employer Name",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_1"
@@ -879,17 +900,20 @@
       {
         "label": "Insurance Company",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Group #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "ID #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_2"
@@ -901,12 +925,14 @@
       {
         "label": "Insurance Co. Address",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Phone #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_3"
@@ -921,7 +947,8 @@
     "code": "INSURANCE_4",
     "value": "",
     "details": "",
-    "showInputIfValueIs": "Yes"
+    "showInputIfValueIs": "Yes",
+    "optional": true
   },
   {
     "label": "If yes",
@@ -930,12 +957,14 @@
       {
         "label": "Insured's Name",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Social Security #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_5"
@@ -947,7 +976,8 @@
       {
         "label": "Employer Name",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_6"
@@ -959,17 +989,20 @@
       {
         "label": "Insurance Company",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Group #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "ID #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_7"
@@ -981,12 +1014,14 @@
       {
         "label": "Insurance Co. Address",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       },
       {
         "label": "Phone #",
         "value": "",
-        "type": "leaf"
+        "type": "leaf",
+        "optional": true
       }
     ],
     "code": "INSURANCE_8"
