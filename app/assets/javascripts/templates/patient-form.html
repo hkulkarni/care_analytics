@@ -3,7 +3,7 @@
 
   <div class="page-header"
        ng-show="patientForm.isHeader(input)">
-    <h3 class="form-header"><span class="light-blue-label"> | </span>{{ patientForm.header(input) }}</h3>
+    <h3 class="form-header light-blue-label"><span> | </span>{{ patientForm.header(input) }}</h3>
   </div>
 
   <h4 ng-show="!patientForm.isHeader(input)"
@@ -16,7 +16,7 @@
        style="padding-bottom: 10px; padding-top: 10px; margin-left: 20px"
        ng-show="patientForm.isRow(input)"
        ng-repeat="child in input.children">
-      <input style="width: 450px; margin-right: 15px;"
+      <input style="width: 450px; margin-right: 15px; border-radius: 0;"
              ng-model="child.value"
              type="text"
              class="form-control">
