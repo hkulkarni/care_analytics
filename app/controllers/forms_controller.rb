@@ -3,6 +3,7 @@ class FormsController < ApplicationController
     def create
         create_pdf
         send_email
+        remove_pdf
         render status: 200, json: @controller.to_json
     end
 
@@ -28,7 +29,11 @@ class FormsController < ApplicationController
     end
 
     def create_pdf
-        PdfService.new(html: pdf_html, patient_form: patient_form).save_pdf
+        pdf_service.save_pdf
+    end
+
+    def remove_pdf
+        pdf_service.remove_pdf
     end
 
     def pdf_html
@@ -38,6 +43,10 @@ class FormsController < ApplicationController
 
     def signature_image
         params['image']
+    end
+
+    def pdf_service 
+        PdfService.new(html: pdf_html, patient_form: patient_form)
     end
 
     def patient_form

@@ -1,14 +1,18 @@
 class PdfService
 
     def initialize(html:, patient_form:)
-        self.html = html
-        self.patient_form = patient_form
+      self.html = html
+      self.patient_form = patient_form
     end
 
     def save_pdf
-        File.open(path, 'wb') do |file|
-          file << pdf
-        end
+      File.open(path, 'wb') do |file|
+        file << pdf
+      end
+    end
+
+    def remove_pdf
+      File.delete(path)
     end
 
     private
