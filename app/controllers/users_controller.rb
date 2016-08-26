@@ -26,7 +26,8 @@ class UsersController < ApplicationController
         :practice_street,
         :practice_city,
         :practice_state,
-        :practice_zip
+        :practice_zip,
+        :admin_email
       )
     end
 
