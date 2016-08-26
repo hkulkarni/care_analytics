@@ -2,10 +2,16 @@
   <div class="form">
     <h4>Register with Formudent:</h4>
     <%= form_for :user, url: '/users', class: 'login-form' do |f| %>
-      Name: <%= f.text_field :name %>
+      First Name: <%= f.text_field :first_name %>
+      Last Name: <%= f.text_field :last_name %>
       Email: <%= f.text_field :email %>
       Password: <%= f.password_field :password %>
-      Password Confirmation: <%= f.password_field :password_confirmation %>
+      Practice Name: <%= f.text_field :practice_name %>
+      Practice Street Name: <%= f.text_field :practice_street %>
+      City: <%= f.text_field :practice_city %>
+      State: <%= f.text_field :practice_state %>
+      Zip: <%= f.text_field :practice_zip %>
+
       <%= f.submit "Submit" %>
     <% end %>
      Have an account? <%= link_to 'Login', '/login' %>
