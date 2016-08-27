@@ -3,9 +3,15 @@
     angular.module('careAnalytics')
       .controller('PatientFormController', PatientFormController);
 
-    PatientFormController.$inject = ['$http'];
+    PatientFormController.$inject = [
+      '$http',
+      '$window'
+    ];
 
-    function PatientFormController($http) {
+    function PatientFormController(
+      $http,
+      $window
+    ) {
       var self = this;
       self.template;
       self.invalid = false;
@@ -51,12 +57,17 @@
           self.submitting = false;
           setSubmitSuccessful();
           clearForm();
+          scrollToTop();
         });
       }
 
       function clearForm() {
         self.initializeForms();
         self.signaturePad.clear();
+      }
+
+      function scrollToTop() {
+        $window.scrollTo(0, 0);
       }
 
       self.label = function(child) {
