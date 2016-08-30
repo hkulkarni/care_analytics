@@ -131,10 +131,7 @@
     "options": [
       "Flyers",
       "Facebook",
-      "Google Search",
-      "TV ad",
-      "Radio ad",
-      "Billboard"
+      "Google Search"
     ],
     "code": "REFERRAL_OPTIONS",
     "value": ""
