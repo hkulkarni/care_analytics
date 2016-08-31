@@ -131,10 +131,7 @@
     "options": [
       "Flyers",
       "Facebook",
-      "Google Search",
-      "TV ad",
-      "Radio ad",
-      "Billboard"
+      "Google Search"
     ],
     "code": "REFERRAL_OPTIONS",
     "value": ""
@@ -749,30 +746,6 @@
     "showInputIfValueIs": "Yes"
   },
   {
-    "label": "What is your attitude toward receiving orthodontic treatment?",
-    "type": "radio-with-input",
-    "options": [
-      "Yes",
-      "No"
-    ],
-    "code": "DENTAL_HISTORY_13",
-    "value": "",
-    "details": "",
-    "showInputIfValueIs": "Yes"
-  },
-  {
-    "label": "Has anyone in your family received orthodontic treatment? How did they feel about the result?",
-    "type": "radio-with-input",
-    "options": [
-      "Yes",
-      "No"
-    ],
-    "code": "DENTAL_HISTORY_14",
-    "value": "",
-    "details": "",
-    "showInputIfValueIs": "Yes"
-  },
-  {
     "label": "Do your teeth or jaws ever feel uncomfortable when you awake in the morning?",
     "type": "radio-with-input",
     "options": [
@@ -857,7 +830,7 @@
     "showInputIfValueIs": "Yes"
   },
   {
-    "label": "ORTHODONTIC INSURANCE INFORMATION",
+    "label": "INSURANCE INFORMATION",
     "type": "header",
     "code": "INSURANCE_INFO_HEADER"
   },
@@ -1029,7 +1002,7 @@
   {
     "label": "",
     "type": "text",
-    "value": "IF ORTHODONTIC INSURANCE covers a part of the fee, it may be paid directly to the practice or to the policy holder as arranged. If at any time, there is a change of employment, job status or insurance carrier, whatever part of the account balance not paid directly to the practice by an insurance company must be paid by the Financially Responsible Person. I hereby authorize release of any information relating to this claim and authorize payment of insurance benefits directly to the doctor.",
+    "value": "IF INSURANCE covers a part of the fee, it may be paid directly to the practice or to the policy holder as arranged. If at any time, there is a change of employment, job status or insurance carrier, whatever part of the account balance not paid directly to the practice by an insurance company must be paid by the Financially Responsible Person. I hereby authorize release of any information relating to this claim and authorize payment of insurance benefits directly to the doctor.",
     "code": "INFORMATION"
   }
 ]
