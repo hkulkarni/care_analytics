@@ -434,7 +434,8 @@
     "code": "MEDICAL_HISTORY_10",
     "value": "",
     "details": "",
-    "showInputIfValueIs": "Yes"
+    "showInputIfValueIs": "Yes",
+    "optional": true
   },
   {
     "label": "Check any of the medical conditions below that you have had or currently have.",
