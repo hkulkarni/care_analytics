@@ -2,38 +2,76 @@
 span {
     display: block;
 }
+
+.form-header {
+    font-size: 18px;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 18px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.form-checkbox-question {
+    font-size: 14px;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 14px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.form-response {
+    font-size: 14px;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 14px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.grey-label {
+    color: #595d64;
+}
+
+.black {
+    color: black;
+}
+
+.wrap-response {
+    display: inline;
+}
 </style>
 
-<div style="display:inline;">
+<div>
+    <h4 class='form-header'> Patient information for <%= @user_full_name %> </h4>
 <% @patient_form.each do |section| %>
-    <% if section['label'] != '' %>
-        <h3> <%= section['label'] %>: </h3>
-    <% else %>
-        <br>
-    <% end %>
-
     <% if section['type'] == 'header' %>
-        <h2> <%= section['label'] %>: </h2>
+        <span class='form-header'> <%= section['label'] %>: </span>
     <% end %>
     
     <% if section['type'] == 'row' %>
         <% section['children'].each do |child| %>
-            <span> <b><%= child['label'] %>:</b> <%= child['value'] %> </span>
+            <span class="form-response"> <%= child['label'] %>: <b class="grey-label"><%= child['value'] %> </b></span>
         <% end %>
     <% end %>
 
     <% if section['type'] == 'radio-with-input' %>
-        <span> <%= section['value'] %> - <%= section['details'] %></span>
+        <div>
+            <span class='form-checkbox-question wrap-response'> <%= section['label'] %>: </span>
+            <span class="form-response wrap-response grey-label"> <%= section['value'] %> - <%= section['details'] %></span>
+        </div>
     <% end %>
 
     <% if section['type'] == 'checkbox' %>
+        <span class='form-header'> <%= section['label'] %>: </span>
         <% section['children'].each do |child| %>
-            <span> <b><%= child['label'] %>:</b> <%= child['value'] %> </span>
+            <span class="form-response"> <%= child['label'] %>: <b class="grey-label"><%= child['value'] %></b> </span>
         <% end %>
     <% end %>
 
     <% if section['type'] == 'text' %>
-        <span> <%= section['value'] %> </span>
+        <span class="form-response grey-label"> <%= section['value'] %> </span>
     <% end %>
 <% end %>
 

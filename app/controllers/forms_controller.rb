@@ -37,6 +37,7 @@ class FormsController < ApplicationController
     end
 
     def pdf_html
+        @user_full_name = patient_form.full_name
         @patient_form = params['patientForm']
         render_to_string(:action => :pdf, :layout => "pdf.html.erb")
     end
