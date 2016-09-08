@@ -14,7 +14,9 @@
             <a class="navbar-brand" href="#"><%= current_user.practice_name %> check in</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><div class="navbar-brand navbar-powered-by" > powered by </div><img src="<%= asset_path( 'formudent.png' ) %>" class="navbar-image" href="www.formudent.com"/></li>
+          <% if has_logo? %>
+            <li><img src="<%= asset_path( "#{logo_file_name}" ) %>" class="navbar-image"/></li>
+          <% end %>
           <li><a href="/logout"> Logout </a></li>
 
         </ul>
