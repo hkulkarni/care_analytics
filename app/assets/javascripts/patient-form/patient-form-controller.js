@@ -132,6 +132,7 @@
 
       function invalidForm() {
         var invalid = false;
+        if (self.signaturePad.isEmpty()) { return true; }
         for (var index = 0; index < self.template.length; index++) {
           var section = self.template[index];
 
