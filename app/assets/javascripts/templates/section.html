@@ -42,3 +42,20 @@
        style="position:relative; top: 15px; mergin-left: 8px;">
        You have not filled out all the required fields! All fields with '*' are required.
 </label>
+
+<!-- Submit successful modal -->
+<div class="modal fade in" role="dialog" style="display: block;" ng-show="section.showSubmitSuccessful">  
+    <div class="modal-dialog">    
+        <div class="modal-content">   
+            <div class="modal-header">
+              <h4 class="modal-title">Submission Successful!</h4>
+            </div>
+            <div class="modal-body">
+              <p>Please return the device to the front desk.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" ng-click="section.unsetSubmitSuccessful()">OK</button>
+            </div>   
+        </div>  
+    </div>
+</div>

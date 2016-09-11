@@ -17,6 +17,7 @@
       self.count = 0;
       self.invalid = false;
       self.submitting = false;
+      self.showSubmitSuccessful = false;
 
       self.initializeForms = function() {
         return $http({
@@ -55,6 +56,7 @@
         }).then(function(response) {
           console.log("Submitted form");
           self.submitting = false;
+          setSubmitSuccessful();
           clearForm();
           scrollToTop();
         });
@@ -105,6 +107,14 @@
         }
         return false;
       };
+
+      function setSubmitSuccessful() {
+        self.showSubmitSuccessful = true;
+      }
+
+      self.unsetSubmitSuccessful = function() {
+        self.showSubmitSuccessful = false;
+      }
 
       //--------------------------- invalid form check ----------------------------
 
@@ -171,7 +181,6 @@
           canvas.getContext("2d").scale(ratio, ratio);
       }
 
-      window.onresize = resizeCanvas;
       resizeCanvas();
 
       self.signaturePad = new SignaturePad(canvas);
