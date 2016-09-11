@@ -34,6 +34,10 @@ span {
     color: #595d64;
 }
 
+.green-label {
+    color: green;
+}
+
 .black {
     color: black;
 }
@@ -66,7 +70,11 @@ span {
     <% if section['type'] == 'checkbox' %>
         <span class='form-header'> <%= section['label'] %>: </span>
         <% section['children'].each do |child| %>
-            <span class="form-response"> <%= child['label'] %>: <b class="grey-label"><%= child['value'] %></b> </span>
+            <% if child['value'] == true %>
+                <span class="form-response"> <%= child['label'] %>: <b class="green-label"> Yes </b> </span>
+            <% else %>
+                <span class="form-response"> <%= child['label'] %>: <b class="grey-label"> No </b> </span>
+            <% end %>
         <% end %>
     <% end %>
 
