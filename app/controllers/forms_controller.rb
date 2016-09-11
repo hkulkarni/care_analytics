@@ -3,7 +3,7 @@ class FormsController < ApplicationController
     def create
         create_pdf
         send_email
-        remove_pdf
+        # remove_pdf
         render status: 200, json: @controller.to_json
     end
 

@@ -1,0 +1,70 @@
+<form class="form-inline" 
+      ng-repeat="input in patientForm.template track by input.code">
+
+  <div class="page-header"
+       ng-if="::patientForm.isHeader(input)">
+    <h3 class="form-header light-blue-label">{{ ::patientForm.header(input) }}</h3>
+  </div>
+
+  <h4 ng-if="::!patientForm.isHeader(input)"
+      class="grey-label form-label-medium">
+      {{ ::patientForm.label(input) }}
+  </h4>
+
+  <!-- row markup -->
+  <div class="form-group"
+       style="padding-bottom: 10px; padding-top: 10px; margin-left: 20px"
+       ng-if="::patientForm.isRow(input)"
+       ng-repeat="child in input.children">
+      <input style="width: 450px; margin-right: 15px; border-radius: 0;"
+             ng-model="child.value"
+             type="text"
+             class="form-control">
+      <label class="grey-label form-label-sm">{{ ::patientForm.label(child) }}</label>
+  </div>
+
+  <!-- radio markup -->
+  <div class="radio-inline"
+       ng-if="::patientForm.isRadio(input)"
+       ng-repeat="option in input.options">
+      <label class="btn btn-info" 
+             ng-model="input.value"
+             uib-btn-radio="option"
+             uncheckable>
+             {{ option }}
+      </label>    
+  </div>
+  
+  <!-- radio details markup -->
+  <div ng-show="patientForm.showInputField(input)">
+    <textarea style="width: 936px; margin-left: 20px; margin-top: 12px;" 
+           ng-model="input.details"
+           type="text"
+           class="form-control has-error"
+           rows="3"
+           placeholder="Additional information">
+    </textarea>
+  </div>
+
+  <!-- checkbox details markup -->
+  <div class="checkbox-inline"
+       ng-show="patientForm.isCheckbox(input)"
+       ng-repeat="option in input.children"
+       style="margin-left: 0px;">
+      <label class="btn btn-info" 
+             ng-model="option.value"
+             style="width: 275px; margin-bottom: 5px; margin-right: 35px"
+             uib-btn-checkbox>
+             {{ option.label }}
+      </label>
+  </div>
+
+  <!-- text markup -->
+  <div ng-if="::patientForm.isText(input)"
+       style="margin-bottom: 15px;">
+      <label>
+        {{ input.value }}
+      </label>
+  </div>
+
+</form>
