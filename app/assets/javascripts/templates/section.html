@@ -1,0 +1,68 @@
+<patient-form-new template='section.sections[section.count]'></patient-form-new>
+
+<div ng-show="section.isSignature()" id="signature-pad" class="m-signature-pad" style="min-height: 500px;">
+  <div class="m-signature-pad--body">
+    <canvas></canvas>
+  </div>
+  <div class="m-signature-pad--footer">
+    <div class="description">Sign above</div>
+    <button type="button" class="button clear" data-action="clear">Clear</button>
+  </div>
+</div>
+
+<button id="submit-button"
+        type="button"
+        class="btn btn-info"
+        style="margin-top: 30px;"
+        ng-click="section.back()"
+        ng-show="!section.firstSection()">
+    Back
+</button>
+
+<button id="submit-button"
+        type="button"
+        class="btn btn-info pull-right"
+        style="margin-top: 30px;"
+        ng-click="section.submit()"
+        ng-show="section.reachedLastSection()">
+    {{ section.buttonText() }}
+</button>
+
+<label class="control-label text-danger"
+       ng-show="section.invalid"
+       style="position:relative; top: 15px; mergin-left: 8px;">
+       You have not filled out all the required fields! All fields with '*' are required.
+</label>
+
+<button id="submit-button"
+        type="button"
+        class="btn btn-info pull-right"
+        style="margin-top: 30px;"
+        ng-click="section.next()"
+        ng-show="!section.reachedLastSection()">
+    Next
+</button>
+
+<uib-progressbar 
+     class="section-progress-bar"
+     max="section.numberOfSections()"
+     value="section.sectionIndex()">
+     <span class="progress-bar-label">{{ section.sectionIndex() }} / {{ section.numberOfSections() }}</span>
+</uib-progressbar>
+
+<!-- Submit successful modal -->
+<div class="modal fade in" role="dialog" style="display: block;" ng-show="section.showSubmitSuccessful">  
+    <div class="modal-dialog">    
+        <div class="modal-content">   
+            <div class="modal-header">
+              <h4 class="modal-title">Submission Successful!</h4>
+            </div>
+            <div class="modal-body">
+              <p>Please return the device to the front desk.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" ng-click="section.unsetSubmitSuccessful()">OK</button>
+            </div>   
+        </div>  
+    </div>
+</div>
