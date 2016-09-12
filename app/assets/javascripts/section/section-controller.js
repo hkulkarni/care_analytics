@@ -72,6 +72,15 @@
         $window.scrollTo(0, 0);
       }
 
+      self.numberOfSections = function() {
+        if (self.sections.length) { return self.sections.length; }
+        return 0;
+      };
+
+      self.sectionIndex = function() {
+        return self.count + 1;
+      };
+
       self.buttonText = function() {
         if (self.submitting === true) { return 'Submitting...'; }
         return 'Submit';
@@ -81,6 +90,7 @@
         self.invalid = invalidForm(self.sections[self.count]);
         if (!self.reachedLastSection() && !self.invalid) { 
           self.count++;
+          scrollToTop();
         }
       };
 

@@ -21,16 +21,7 @@
 
 <button id="submit-button"
         type="button"
-        class="btn btn-info"
-        style="margin-top: 30px;"
-        ng-click="section.next()"
-        ng-show="!section.reachedLastSection()">
-    Next
-</button>
-
-<button id="submit-button"
-        type="button"
-        class="btn btn-info"
+        class="btn btn-info pull-right"
         style="margin-top: 30px;"
         ng-click="section.submit()"
         ng-show="section.reachedLastSection()">
@@ -42,6 +33,22 @@
        style="position:relative; top: 15px; mergin-left: 8px;">
        You have not filled out all the required fields! All fields with '*' are required.
 </label>
+
+<button id="submit-button"
+        type="button"
+        class="btn btn-info pull-right"
+        style="margin-top: 30px;"
+        ng-click="section.next()"
+        ng-show="!section.reachedLastSection()">
+    Next
+</button>
+
+<uib-progressbar 
+     class="section-progress-bar"
+     max="section.numberOfSections()"
+     value="section.sectionIndex()">
+     <span class="progress-bar-label">{{ section.sectionIndex() }} / {{ section.numberOfSections() }}</span>
+</uib-progressbar>
 
 <!-- Submit successful modal -->
 <div class="modal fade in" role="dialog" style="display: block;" ng-show="section.showSubmitSuccessful">  

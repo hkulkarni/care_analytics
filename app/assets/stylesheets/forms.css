@@ -37,3 +37,14 @@
 .navbar-image {
     height: 46px;
 }
+
+.section-progress-bar {
+    margin-top: 38px;
+    margin-left: 205px;
+    width: 600px;
+}
+
+.progress-bar-label {
+    color: white; 
+    white-space:nowrap;
+}
