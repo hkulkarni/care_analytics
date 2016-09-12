@@ -68,18 +68,19 @@ span {
             </div>
         <% end %>
 
-    <% if section['type'] == 'checkbox' %>
-        <span class='form-header'> <%= section['label'] %>: </span>
-        <% section['children'].each do |child| %>
-            <% if child['value'] == true %>
-                <span class="form-response"> <%= child['label'] %>: <b class="green-label"> Yes </b> </span>
-            <% else %>
-                <span class="form-response"> <%= child['label'] %>: <b class="grey-label"> No </b> </span>
+        <% if section['type'] == 'checkbox' %>
+            <span class='form-header'> <%= section['label'] %>: </span>
+            <% section['children'].each do |child| %>
+                <% if child['value'] == true %>
+                    <span class="form-response"> <%= child['label'] %>: <b class="green-label"> Yes </b> </span>
+                <% else %>
+                    <span class="form-response"> <%= child['label'] %>: <b class="grey-label"> No </b> </span>
+                <% end %>
             <% end %>
-        <% end %>
 
-        <% if section['type'] == 'text' %>
-            <span class="form-response grey-label"> <%= section['value'] %> </span>
+            <% if section['type'] == 'text' %>
+                <span class="form-response grey-label"> <%= section['value'] %> </span>
+            <% end %>
         <% end %>
     <% end %>
 <% end %>
