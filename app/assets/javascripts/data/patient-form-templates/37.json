@@ -1,0 +1,740 @@
+[
+  [
+    {
+      "label": "PATIENT INFORMATION",
+      "type": "header",
+      "code": "PATIENT_NAME_HEADER"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Last",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "First",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Middle",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Birthdate (MM/DD/YYYY)",
+          "value": "",
+          "type": "leaf"
+        }
+      ],
+      "code": "PATIENT_NAME"
+    },
+    {
+      "label": "Gender",
+      "type": "radio",
+      "options": [
+        "Male",
+        "Female"
+      ],
+      "code": "GENDER_OPTIONS",
+      "value": ""
+    },
+    {
+      "label": "Patient relationship to insurance subscriber",
+      "type": "radio",
+      "options": [
+        "Child",
+        "Self",
+        "Spouse",
+        "Other"
+      ],
+      "code": "RELATIONSHIP_OPTIONS",
+      "value": "",
+      "optional": true
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Address",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "City",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "State",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Zip",
+          "value": "",
+          "type": "leaf"
+        }
+      ],
+      "code": "MAILING_ADDRESS"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Parent/Guardian",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Email",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Preferred Phone",
+          "value": "",
+          "type": "leaf"
+        }
+      ],
+      "code": "CONTACT"
+    },
+    {
+      "label": "Who referred you to our office?",
+      "type": "radio",
+      "options": [
+        "Flyers",
+        "Facebook",
+        "Google Search"
+      ],
+      "code": "REFERRAL_OPTIONS",
+      "value": ""
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Other",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "REFERRAL"
+    }
+  ],
+  [
+    {
+      "label": "DENTAL INSURANCE INFORMATION",
+      "type": "header",
+      "code": "PERSONAL_INFO_HEADER"
+    },
+    {
+      "label": "Subscriber Name",
+      "type": "row",
+      "children": [
+        {
+          "label": "Last",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "First",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Middle",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "PATIENT_NAME"
+    },
+    {
+      "label": "Subscriber gender",
+      "type": "radio",
+      "options": [
+        "Male",
+        "Female"
+      ],
+      "code": "GENDER_OPTIONS",
+      "value": ""
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Subscriber S.S #",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Subscriber DOB",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "SUBSCRIBER_INFO"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Preferred Phone Number",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "SUBSCRIBER_PHONE"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Insurance Co.",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Group #",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "ID #",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "SUBSCRIBER_INSURANCE_INFO"
+    },
+    {
+      "label": "EMERGENCY CONTACT INFORMATION",
+      "type": "header",
+      "code": "EMERGENCY_CONTACT_INFO_HEADER"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Emergency contact's name",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Emergency contact's preferred number",
+          "value": "",
+          "type": "leaf"
+        }
+      ],
+      "code": "EMERGENCY_CONTACT_1"
+    }
+  ],
+  [
+    {
+      "label": "PATIENT MEDICAL INFORMATION",
+      "type": "header",
+      "code": "PATIENT_MED_INFO_HEADER"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Height",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Weight",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Previous Dentist",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Physician",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "PATIENT_INFO"
+    },
+    {
+      "label": "Check any of the medical conditions below that you have had or currently have.",
+      "type": "checkbox",
+      "children": [
+        {
+          "label": "Heart Problems",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Sinus Trouble",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Blood Disorder",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Heart Murmur",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Fainting Spells",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Epilepsy/Seizures",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Rheumatic Fever",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Diabetes Type I or II",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Tumor/Cancer",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Cerebral Palsy",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Anemia",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Radiation/Chemotherapy",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Tuberculosis",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Hemophilia",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "AIDS or HIV+",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Asthma",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Hearing",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Blood Transfusion",
+          "value": "",
+          "type": "leaf"
+        }
+      ],
+      "code": "MEDICAL_HISTORY_11"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Other medical problems",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "List all previous hospitalizations/surgeries",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Current medications",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Allergies to medication",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "MEDICAL_HISTORY_1"
+    },
+    {
+      "label": "Allergic to latex",
+      "type": "radio",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "code": "MEDICAL_HISTORY_2",
+      "value": "",
+      "optional": true
+    },
+    {
+      "label": "Allergic to",
+      "type": "radio",
+      "options": [
+        "Soy",
+        "Egg"
+      ],
+      "code": "MEDICAL_HISTORY_3",
+      "value": "",
+      "optional": true
+    }
+  ],
+  [
+    {
+      "label": "DENTAL HISTORY",
+      "type": "header",
+      "code": "DENTAL_HISTORY_HEADER"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Is this the patient's first visit?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "If not, date of last visit to a dentist?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Does the patient brush teeth daily?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "If patient is a child, do you assist with tooth brushing?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "If so, how often?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Why did you leave your last dental office?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Any injuries to mouth, teeth or head?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Patient’s attitude to dentistry?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Any mouth habits such as thumbsucking, nail biting, mouth breathing, nursing bottle habits, pacifier, etc?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Has the patient ever had a negative dental visit?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "What are your goals for your dental appointment today?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Is there any other condition concerning the patient's health that your doctor should be aware of?",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "DENTAL_HISTORY_2"
+    }
+  ],
+  [
+    {
+      "label": "DENTAL CONSENT FORM",
+      "type": "header",
+      "code": "DENTAL_CONSENT_HEADER"
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "You or your child will be examined in the office and may be in need of some basic dental care. This form will explain the care that is necessary and requests your permission to provide that care.",
+      "code": "INFORMATION"
+    },
+    {
+      "label": "A dental cleaning (or prophylaxis) includes scaling and polishing procedures to remove plaque, calculus, and some stains. ",
+      "type": "radio",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "code": "CONSENT_1",
+      "value": ""
+    },
+    {
+      "label": "Dental x-rays are used to check for cavities, check the health of the tooth root and bone surrounding the tooth, check the status of developing teeth, and monitor the general health of your teeth and jawbone.",
+      "type": "radio",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "code": "CONSENT_2",
+      "value": ""
+    },
+    {
+      "label": "Fluoride is used to protect teeth from demineralization and prevent cavities. It also strengthens teeth and enamel.",
+      "type": "radio",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "code": "CONSENT_3",
+      "value": ""
+    },
+    {
+      "label": "Back teeth have deep grooves and pits in which decay usually starts. The dentist will seal the grooves with a plastic coating to help prevent decay from starting. No anesthetic is needed.",
+      "type": "radio",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "code": "CONSENT_4",
+      "value": ""
+    },
+    {
+      "label": "Decay dissolves the tooth and if not treated, will result in an abscessed tooth causing pain and infection. The dentist will remove the decayed and weakened part of the tooth and replace it with a tooth colored material (white filling) to strengthen the tooth. A local anesthetic may be used that will numb the area being treated for one to two hours",
+      "type": "radio",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "code": "CONSENT_5",
+      "value": ""
+    },
+    {
+      "label": "If a tooth is badly destroyed by decay, it may be non-restorable and need to be extracted. Other reasons for extractions include loose or over-retained baby teeth, or extractions for orthodontics. A local anesthetic may be used that will numb the area being treated for one to two hours.",
+      "type": "radio",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "code": "CONSENT_6",
+      "value": ""
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "If you have any questions regarding the care needed by you or your child, please let us know and we will be happy to explain the care more fully. There may be minor changes once treatment has been started. You will be notified of only major changes. As the parent or guardian, by signing below you authorize Showtime Smiles to provide these services.",
+      "code": "CONSENT"
+    }
+  ],
+  [
+    {
+      "label": "Health Insurance Portability and Accountability Act of 1996 (HIPAA)",
+      "type": "header",
+      "code": "HIPAA_CONSENT_HEADER"
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "Acknowledgement of Receipt of Notice of Privacy Practices And Consent for Use and Disclosure of Health Information",
+      "code": "HIPAA_CONSENT_1"
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "Purpose of Consent: By signing this form, you will consent to our use and disclosure of your protected health information to carry out treatment, payment activities and healthcare operations.",
+      "code": "HIPAA_CONSENT_2"
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "Notice of Privacy Practices: You have the right to read our Notice of Privacy Practices before you decide whether to sign this consent. Our notice provides a description of our treatment, payment activities, and healthcare operations, of the uses and disclosures we may make of your protected health information, and of other important matters about your protected health information. A copy of our notice accompanies this consent. We encourage you to read it carefully and completely before signing this consent.",
+      "code": "HIPAA_CONSENT_3"
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "We reserve the right to change our privacy practices as described in our Notice of Privacy Practices. If we change our privacy practices, we will issue a revised Notice of Privacy Practices, which will contain the changes. Those changes may apply to any of your protected health information that we maintain.",
+      "code": "HIPAA_CONSENT_4"
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "You may obtain a copy of our Notice of Privacy Practices at any time by contacting our office.",
+      "code": "HIPAA_CONSENT_5"
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "I hereby authorize Showtime Smiles, PLLC to publish the photographs taken of me and/or my child, and of my name, for use in their printed publications and website. I acknowledge that since my participation in publications and websites produced by Showtime Smiles, PLLC is voluntary, I will receive no financial compensation. I further agree that my participation in any publication and website produced by Showtime Smiles, PLLC confers upon me no rights of ownership whatsoever",
+      "code": "HIPAA_CONSENT_6"
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "I acknowledge that Showtime Smiles, PPLC utilizes multiple video cameras throughout the office (both inside and outside of the building). This is to maintain the security of our employees and patients. I understand that these video cameras are recording footage 24 hours/day and will be monitored by the management. ",
+      "code": "HIPAA_CONSENT_7"
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "I release Showtime Smiles, PLLC, its contractors and its employees from liability for any claims by me or any third party in connection with my participation.",
+      "code": "HIPAA_CONSENT_8"
+    },
+    {
+      "label": "I wish to be contacted in the following manner (check all that apply)",
+      "type": "checkbox",
+      "children": [
+        {
+          "label": "Okay to leave message with detailed info",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Okay to leave text with call-back #",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Okay to mail to my home",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Okay to E-mail",
+          "value": "",
+          "type": "leaf"
+        }
+      ],
+      "code": "MEDICAL_HISTORY_11"
+    },
+    {
+      "label": "I allow you to give my clinical information to or answer questions from (check all that apply)",
+      "type": "checkbox",
+      "children": [
+        {
+          "label": "Spouse",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Parent",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Child",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "None",
+          "value": "",
+          "type": "leaf"
+        }
+      ],
+      "code": "MEDICAL_HISTORY_12"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Other",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "MEDICAL_HISTORY_13"
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "I have had full opportunity to read and consider the contents of this Consent form and your Notice of Privacy Practices. I understand that, by signing this Consent form, I am giving my consent to your use and disclosure of my protected health information to carry out treatment, payment activities and health care operations.",
+      "code": "HIPAA_CONSENT_9"
+    },
+    {
+      "label": "",
+      "type": "signature",
+      "value": "",
+      "code": "SIGNATURE"
+    }
+  ]
+]
