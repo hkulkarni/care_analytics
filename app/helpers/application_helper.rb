@@ -12,6 +12,8 @@ module ApplicationHelper
             return "deepak_gupta.png"
         when "daniel_gehani"
             return "daniel_gehani.png"
+        when "hardik_chodavadia"
+            return "hardik_chodavadia.png"
         else
             return ''
         end
@@ -22,7 +24,8 @@ module ApplicationHelper
         current_user.file_name == 'sachin_kulkarni' ||
         current_user.file_name == 'herschel_kulkarni' ||
         current_user.file_name == 'samir_kulkarni' ||
-        current_user.file_name == 'daniel_gehani'
+        current_user.file_name == 'daniel_gehani' ||
+        current_user.file_name == 'hardik_chodavadia'
     end
 
 end
