@@ -38,7 +38,7 @@
       "type": "row",
       "children": [
         {
-          "label": "Street",
+          "label": "Address",
           "value": "",
           "type": "leaf"
         },

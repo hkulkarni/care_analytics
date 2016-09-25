@@ -37,7 +37,7 @@
         if (self.invalid) { return ; }
 
         var dataURL = self.signaturePad.toDataURL().replace('data:image/png;base64,', '');
-        var data = { image: dataURL };
+        var data = { image: dataURL, id: getParameterByName('id') };
 
         return $http({
           url: '/signature',
@@ -49,7 +49,7 @@
       };
 
       function submitForm() {
-        var data = { patientForm: self.sections };
+        var data = { patientForm: self.sections, id: getParameterByName('id') };
         self.submitting = true;
 
         return $http({
