@@ -8,21 +8,33 @@
 </head>
 <body>
 <% if current_user %>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#"><%= current_user.practice_name %> check in</a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-          <% if has_logo? %>
-            <li><img src="<%= asset_path( "#{logo_file_name}" ) %>" class="navbar-image"/></li>
-          <% end %>
-          <li><a href="/logout"> Logout </a></li>
-
-        </ul>
-
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="#"><%= current_user.practice_name %> check in</a>
       </div>
-    </nav>
+      <ul class="nav navbar-nav navbar-right">
+        <% if has_logo? %>
+          <li><img src="<%= asset_path( "#{logo_file_name}" ) %>" class="navbar-image"/></li>
+        <% end %>
+        <li><a href="/logout"> Logout </a></li>
+
+      </ul>
+
+    </div>
+  </nav>
+<% else %>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="#">Dentist check in</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/logout"> Logout </a></li>
+      </ul>
+
+    </div>
+  </nav>
 <% end %>
 
 <%= yield %>

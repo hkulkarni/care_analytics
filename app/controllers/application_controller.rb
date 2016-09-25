@@ -5,11 +5,19 @@ class ApplicationController < ActionController::Base
       if: Proc.new { |c| c.request.format =~ %r{application/json} }
 
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    begin
+      if session[:user_id]
+        @current_user ||= User.find(session[:user_id])
+      elsif params['id']
+        @current_user ||= User.find(params['id'])
+      end
+    rescue ActiveRecord::RecordNotFound => e
+      Rails.logger.info("Attempted to retrieve non-existent user with id: #{params['id'].inspect} session: #{session[:user_id].inspect}")
+      @current_user = nil
+    end
   end
   helper_method :current_user
 
   def authorize
-    redirect_to '/login' unless current_user
   end
 end

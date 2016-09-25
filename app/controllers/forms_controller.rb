@@ -8,7 +8,7 @@ class FormsController < ApplicationController
     end
 
     def template
-        file = File.read("app/assets/javascripts/data/patient-form-templates/#{current_user.file_name}.json")
+        file = File.read("app/assets/javascripts/data/patient-form-templates/#{params['id']}.json")
         render :json => JSON.parse(file)
     rescue
         file = File.read("app/assets/javascripts/data/patient-form-templates/default.json")

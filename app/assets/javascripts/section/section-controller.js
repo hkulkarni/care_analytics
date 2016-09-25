@@ -5,12 +5,14 @@
 
     SectionController.$inject = [
       '$http',
-      '$window'
+      '$window',
+      '$location'
     ];
 
     function SectionController(
       $http,
-      $window
+      $window,
+      $location
     ) {
       var self = this;
       self.sections = {};
@@ -22,7 +24,8 @@
       self.initializeForms = function() {
         return $http({
           url: '/form',
-          method: 'GET'
+          method: 'GET',
+          params: { id: getParameterByName('id') }
         }).then(function(response) {
           self.sections = response.data;
           console.log("returned sections");
@@ -169,6 +172,16 @@
         }
 
         return (formObj.optional && formObj.optional === true) || allChildrenOptional;
+      }
+
+      function getParameterByName(name, url) {
+          if (!url) { url = window.location.href; }
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+          if (!results) { return null; }
+          if (!results[2]) { return ''; }
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
       }
 
       //--------------------------- end invalid form check ----------------------------
