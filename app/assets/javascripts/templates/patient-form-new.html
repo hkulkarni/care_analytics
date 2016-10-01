@@ -27,7 +27,8 @@
   <div class="radio-inline"
        ng-if="::patientForm.isRadio(input)"
        ng-repeat="option in input.options">
-      <label class="btn btn-info" 
+      <label class="btn btn-info"
+             style="margin-top: 10px;" 
              ng-model="input.value"
              uib-btn-radio="option"
              uncheckable>
