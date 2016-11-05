@@ -82,7 +82,7 @@ config.action_mailer.raise_delivery_errors = true
 
 ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.gmail.com',
-  :domain         => 'mail.google.com',
+  :domain         => 'formudent.herokuapp.com',
   :port           => 587,
   :user_name      => 'formudent.services@gmail.com',
   :password       => 'superstronglongformudentpassword',
