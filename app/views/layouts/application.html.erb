@@ -13,6 +13,9 @@
       <div class="navbar-header">
           <a class="navbar-brand" href="#"><%= current_user.practice_name %> check in</a>
       </div>
+      <div class="navbar-header">
+          <a class="navbar-brand" style="padding-left: 170px" href="#">Contact Us: <%= current_user.admin_email %></a>
+      </div>
       <ul class="nav navbar-nav navbar-right">
         <% if has_logo? %>
           <li><img src="<%= asset_path( "#{logo_file_name}" ) %>" style="margin-right: 15px;" class="navbar-image"/></li>
