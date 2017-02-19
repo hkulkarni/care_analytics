@@ -26,8 +26,17 @@ span {
     font-weight: 200;
     font-style: normal;
     line-height: 14px;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
     margin-top: 2px;
+}
+
+.form-yes-response {
+    font-size: 28px;
+    font-weight: 200;
+    font-style: bold;
+    line-height: 14px;
+    margin-bottom: 200px;
+    margin-top: 8px;
 }
 
 .grey-label {
@@ -65,7 +74,7 @@ span {
             <div>
                 <span class='form-checkbox-question wrap-response'> <%= section['label'] %>: </span>
                 <% if section['value'] == 'Yes' %>
-                    <span class="form-response wrap-response green-label"> <%= section['value'] %> - <%= section['details'] %></span>
+                    <span class="form-yes-response green-label"> <%= section['value'] %> - <%= section['details'] %></span>
                 <% else %>
                     <span class="form-response wrap-response grey-label"> <%= section['value'] %> - <%= section['details'] %></span>
                 <% end %>
@@ -76,7 +85,7 @@ span {
             <span class='form-header'> <%= section['label'] %>: </span>
             <% section['children'].each do |child| %>
                 <% if child['value'] == true %>
-                    <span class="form-response"> <%= child['label'] %>: <b class="green-label"> Yes </b> </span>
+                    <span class="form-yes-response"> <%= child['label'] %>: <b class="green-label"> Yes </b> </span>
                 <% else %>
                     <span class="form-response"> <%= child['label'] %>: <b class="grey-label"> No </b> </span>
                 <% end %>
