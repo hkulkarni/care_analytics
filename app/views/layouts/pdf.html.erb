@@ -70,6 +70,13 @@ span {
             <% end %>
         <% end %>
 
+        <% if section['type'] == 'radio' %>
+            <div>
+                <span class='form-checkbox-question wrap-response'> <%= section['label'] %>: </span>
+                <span class="form-yes-response green-label"> <%= section['value'] %></span>
+            </div>
+        <% end %>
+
         <% if section['type'] == 'radio-with-input' %>
             <div>
                 <span class='form-checkbox-question wrap-response'> <%= section['label'] %>: </span>
