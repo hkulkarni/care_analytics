@@ -9,13 +9,12 @@
     function patientForm() {
       return {
         restrict: 'E',
-        scope: true, 
+        bindToController: {
+          template: '='
+        },
         templateUrl: 'patient-form.html',
         controller: 'PatientFormController',
-        controllerAs: 'patientForm',
-        link: function(scope, element, attributes, controller) {
-          controller.initializeForms();
-        }
+        controllerAs: 'patientForm'
       };
     }
 
