@@ -1,6 +1,7 @@
 class FormsController < ApplicationController
 
     def create
+        save_form
         create_pdf
         send_email
         remove_pdf
@@ -23,6 +24,13 @@ class FormsController < ApplicationController
     end
 
     private
+
+    def save_form
+        form = PatientForm.create(
+            user_id: current_user.id,
+            form_data: params['patientForm']
+        )
+    end
 
     def send_email
         PatientInformationMailer.patient_checkin_email(current_user, patient_form).deliver_now
@@ -51,7 +59,7 @@ class FormsController < ApplicationController
     end
 
     def patient_form
-        PatientForm.new(form: params['patientForm'])
+        PatientFormService.new(form: params['patientForm'])
     end
 
     def template_name
