@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
   put 'create', to: 'home#signup', as: 'signup'
+  get 'portal', to: 'home#portal', as: 'portal'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

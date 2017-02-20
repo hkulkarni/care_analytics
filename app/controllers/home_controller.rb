@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def signup
   end
+
+  def portal
+  end
 end
