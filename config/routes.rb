@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   post '/forms' => 'forms#create'
   post '/signature' => 'forms#save_signature'
   get '/form' => 'forms#template'
+  get '/list' => 'forms#list'
 end

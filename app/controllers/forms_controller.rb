@@ -8,6 +8,10 @@ class FormsController < ApplicationController
         render status: 200, json: @controller.to_json
     end
 
+    def list
+        render :json => JSON.parse(PatientForm.all.to_json)
+    end
+
     def template
         file = File.read("app/assets/javascripts/data/patient-form-templates/#{params['id']}.json")
         render :json => JSON.parse(file)
@@ -26,7 +30,7 @@ class FormsController < ApplicationController
     private
 
     def save_form
-        form = PatientForm.create(
+        PatientForm.create(
             user_id: current_user.id,
             form_data: params['patientForm']
         )

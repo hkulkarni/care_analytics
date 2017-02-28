@@ -11,10 +11,10 @@
         restrict: 'E',
         scope: true, 
         templateUrl: 'portal.html',
-        // controller: 'EditMedicationController',
-        // controllerAs: 'editMedication',
+        controller: 'portalController',
+        controllerAs: 'portal',
         link: function(scope, element, attributes, controller) {
-          // controller.initializeMedications();
+          controller.initialize();
         }
       };
     }
