@@ -9,7 +9,7 @@ class FormsController < ApplicationController
     end
 
     def list
-        render :json => JSON.parse(PatientForm.all.to_json)
+        render :json => JSON.parse(PatientForm.where(user_id: current_user.id).to_json)
     end
 
     def template

@@ -24,10 +24,13 @@
         });
       };
 
-      self.name = function(nameElement) {
-        var names = nameElement.form_data[0][1].children;
+      self.name = function(form_obj) {
+        var names = form_obj.form_data[0][1].children;
         return names[1].value + ' ' + names[2].value + ' ' + names[0].value;
       };
 
+      self.filled_date = function(form_obj) {
+        return form_obj.created_at.substring(0, 9);
+      };
     }
 })();

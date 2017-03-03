@@ -1,12 +1,11 @@
-<h3 style="padding-top: 50px">Welcome to your portal!</h3>
+<h3 style="padding-top: 50px">My Patient Forms</h3>
 
 <div class="list-group">
   <div>
-
     <a class="list-group-item"
        ng-repeat="form in portal.forms track by form.id">
         <h4 class="list-group-item-heading">{{ ::portal.name(form); }}</h4>
-        <p class="list-group-item-text">Filled at {{ ::form.created_at }}.</p>
+        <p class="list-group-item-text">Filled {{ ::portal.filled_date(form); }}</p>
     </a>
 
   </div>
