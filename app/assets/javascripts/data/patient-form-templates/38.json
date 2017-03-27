@@ -12,12 +12,14 @@
         {
           "label": "First",
           "value": "",
-          "type": "leaf"
+          "type": "leaf",
+          "optional": true
         },
         {
           "label": "Last",
           "value": "",
-          "type": "leaf"
+          "type": "leaf",
+          "optional": true
         }
       ],
       "code": "PATIENT_NAME"
