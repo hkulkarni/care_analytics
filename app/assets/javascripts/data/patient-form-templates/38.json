@@ -1,0 +1,270 @@
+[
+  [
+    {
+    "label": "Patient Information (This is customizable!)",
+    "type": "header",
+    "code": "PATIENT_NAME_HEADER"
+    },
+    {
+      "label": "Name",
+      "type": "row",
+      "children": [
+        {
+          "label": "First",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Last",
+          "value": "",
+          "type": "leaf"
+        }
+      ],
+      "code": "PATIENT_NAME"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Driver's License #",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Date of birth",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Social security number",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "PERSONAL_INFO_1"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Primary Phone",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Alternative Phone",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        },
+        {
+          "label": "Email",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "PERSONAL_INFO_2"
+    },
+    {
+      "label": "How did you hear about Formudent?",
+      "type": "header",
+      "code": "REFERRAL_HEADER"
+    },
+    {
+      "label": "",
+      "type": "radio",
+      "options": [
+        "Colleague/Peer",
+        "Social media",
+        "Google search",
+        "Forums",
+        "Print ad",
+        "Banner ad"
+      ],
+      "code": "REFERRAL_1",
+      "value": "",
+      "optional": true
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Other",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "REFERRAL_2"
+    }
+  ],
+  [
+    {
+      "label": "Medical History (We are mobile friendly!)",
+      "type": "header",
+      "code": "MEDICAL_HISTORY_HEADER"
+    },
+    {
+      "label": "Do you have or have you had any of the following breathing problems?",
+      "type": "checkbox",
+      "children": [
+        {
+          "label": "Asthma",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Emphysema",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Bronchitis",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Tuberculosis",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Shortness of breath",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Other breathing problems",
+          "value": "",
+          "type": "leaf"
+        }
+      ],
+      "code": "MEDICAL_HISTORY_1"
+    },
+    {
+      "label": "",
+      "type": "row",
+      "children": [
+        {
+          "label": "Explain",
+          "value": "",
+          "type": "leaf",
+          "optional": true
+        }
+      ],
+      "code": "MEDICAL_HISTORY_2"
+    },
+    {
+      "label": "Heart or circulation problems?",
+      "type": "checkbox",
+      "children": [
+        {
+          "label": "High blood pressure",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Heart attack",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Angina or chest pain",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Irregular heart beat",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Rheumatic fever",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Heart murmur",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Mitral valve prolapse",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Damage to heart valves",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Heart valve replacement",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Pacemaker/other cardiac device",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Congestive heart failure",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Swollen ankles",
+          "value": "",
+          "type": "leaf"
+        },
+        {
+          "label": "Other heart or circulation problems",
+          "value": "",
+          "type": "leaf"
+        }
+      ],
+      "code": "MEDICAL_HISTORY_3"
+    },
+    {
+      "label": "Do you have a physician?",
+      "type": "radio-with-input",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "code": "MEDICAL_HISTORY_4",
+      "value": "",
+      "details": "",
+      "optional": true,
+      "showInputIfValueIs": "Yes"
+    }
+  ],
+  [ 
+    {
+      "label": "RELEASE",
+      "type": "header",
+      "code": "PATIENT_INFO_HEADER"
+    },
+    {
+      "label": "",
+      "type": "text",
+      "value": "We support digital signatures! Easy on a phone or an iPad. No need to sign here.",
+      "code": "INFORMATION"
+    },
+    {
+      "label": "",
+      "type": "signature",
+      "value": "",
+      "code": "SIGNATURE"
+    }
+  ]
+]
