@@ -89,7 +89,7 @@ config.action_mailer.smtp_settings = {
   authentication: "plain",
   enable_starttls_auto: true,
   user_name: 'formudent.services@gmail.com',
-  password: 'superstronglongformudentpassword'
+  password: 'stronglongformudentpassword'
 }
 
 end
