@@ -77,19 +77,26 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-config.action_mailer.default_url_options = { :host => 'formudent.herokuapp.com' }
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.perform_deliveries = true
-config.action_mailer.raise_delivery_errors = false
-config.action_mailer.default :charset => "utf-8"
-config.action_mailer.smtp_settings = {
-  address: "smtp.gmail.com",
-  port: 587,
-  domain: "formudent.herokuapp.com",
-  authentication: "plain",
-  enable_starttls_auto: true,
-  user_name: 'formudent.services@gmail.com',
-  password: 'stronglongformudentpassword'
-}
+# config.action_mailer.default_url_options = { :host => 'formudent.herokuapp.com' }
+# config.action_mailer.delivery_method = :smtp
+# config.action_mailer.perform_deliveries = true
+# config.action_mailer.raise_delivery_errors = false
+# config.action_mailer.default :charset => "utf-8"
+# config.action_mailer.smtp_settings = {
+#   address: "smtp.gmail.com",
+#   port: 587,
+#   domain: "formudent.herokuapp.com",
+#   authentication: "plain",
+#   enable_starttls_auto: true,
+#   user_name: 'formudent.services@gmail.com',
+#   password: 'stronglongformudentpassword'
+# }
+
+  # Mailgun config
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: 'key-1edbb21a1ba09d34e9da349ea8450f5e',
+    domain: 'sandboxb2210afb425545f69eb7a3b270086ac5.mailgun.org'
+  }
 
 end
