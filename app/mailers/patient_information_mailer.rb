@@ -3,7 +3,8 @@ class PatientInformationMailer < ApplicationMailer
 
   def patient_checkin_email(current_user, patient_form)
     attachments[pdf_name(patient_form)] = File.read("pdfs/#{pdf_name(patient_form)}")
-    mail( :to => current_user.admin_email,
+    mail(:from => "Formudent Services <formudent.services@gmail.com>",
+    :to => current_user.admin_email,
     :subject => "Patient information attached for: #{patient_form.full_name} " )
   end
 
