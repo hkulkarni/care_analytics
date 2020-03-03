@@ -6,7 +6,7 @@
       "code": "PATIENT_INFO_HEADER"
     },
     {
-      "label": "Patient's Name",
+      "label": "Patient Name",
       "type": "row",
       "children": [
         {
