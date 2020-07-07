@@ -85,7 +85,7 @@ GEM
     netrc (0.11.0)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
-    pg (1.2.3)
+    pg (0.21.0)
     rack (1.6.13)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -180,7 +180,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mailgun_rails
-  pg
+  pg (~> 0.20)
   rails (= 4.2.8)
   rails_12factor
   sass-rails (~> 5.0)
