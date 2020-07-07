@@ -95,7 +95,7 @@ Rails.application.configure do
   # Mailgun config
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.mailgun_settings = {
-    api_key: 'key-1edbb21a1ba09d34e9da349ea8450f5e',
+    api_key: 'key-8c9d9179cda85619bcaae645de5edb25',
     domain: 'sandboxb2210afb425545f69eb7a3b270086ac5.mailgun.org'
   }
 
