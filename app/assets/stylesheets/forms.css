@@ -25,8 +25,28 @@
     color: #595d64;
 }
 
-.light-blue-label {
-    color: #31b0d5;
+.grey-section-label {
+    color: #686868;
+}
+
+.formudent-button {
+    background-color: white;
+    color: #346aa7;
+    border-color: #346aa7;
+}
+
+.formudent-button:hover {
+    background-color: #346aa7;
+    color: white;
+}
+
+.formudent-button.active {
+    background-color: #346aa7;
+    color: white;
+}
+
+.widget-blue {
+    color: #346aa7;
 }
 
 .form-label-medium {

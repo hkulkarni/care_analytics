@@ -11,10 +11,10 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-          <a class="navbar-brand" href="#"><%= current_user.practice_name %> check in</a>
+          <p class="navbar-text" style="color: white;"><%= current_user.practice_name %> check in</p>
       </div>
       <div class="navbar-header">
-          <a class="navbar-brand" style="padding-left: 170px" href="#">Contact Us: <%= current_user.admin_email %></a>
+          <p class="navbar-text" style="color: white; padding-left: 170px;">Contact Us: <%= current_user.admin_email %></p>
       </div>
       <ul class="nav navbar-nav navbar-right">
         <% if has_logo? %>
@@ -28,7 +28,7 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-          <a class="navbar-brand" href="#">Dentist check in</a>
+          <p class="navbar-text" style="color: white;">Dentist check in</p>
       </div>
       <ul class="nav navbar-nav navbar-right">
       </ul>

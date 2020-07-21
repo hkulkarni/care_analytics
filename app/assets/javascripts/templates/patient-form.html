@@ -3,7 +3,7 @@
 
   <div class="page-header"
        ng-if="::patientForm.isHeader(input)">
-    <h3 class="form-header light-blue-label">{{ ::patientForm.header(input) }}</h3>
+    <h4 class="grey-section-label">{{ ::patientForm.header(input) }}</h4>
   </div>
 
   <h4 ng-if="::!patientForm.isHeader(input)"
@@ -27,7 +27,7 @@
   <div class="radio-inline"
        ng-if="::patientForm.isRadio(input)"
        ng-repeat="option in input.options">
-      <label class="btn btn-info"
+      <label class="formudent-button btn"
              style="margin-top: 10px;" 
              ng-model="input.value"
              uib-btn-radio="option"
@@ -52,7 +52,7 @@
        ng-show="patientForm.isCheckbox(input)"
        ng-repeat="option in input.children"
        style="margin-left: 0px;">
-      <label class="btn btn-info" 
+      <label class="formudent-button btn" 
              ng-model="option.value"
              style="width: 340px; margin-bottom: 5px; margin-right: 35px"
              uib-btn-checkbox>
